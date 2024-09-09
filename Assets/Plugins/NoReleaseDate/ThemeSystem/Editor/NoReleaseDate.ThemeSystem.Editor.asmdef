@@ -1,0 +1,17 @@
+{
+    "name": "NoReleaseDate.ThemeSystem.Editor",
+    "rootNamespace": "NoReleaseDate.ThemeSystem.Editor",
+    "references": [
+        "GUID:7e6fa84f3a0a70f498510dc9521aabce",
+        "GUID:26ec800c5551ad547a45c9ce3e908543"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

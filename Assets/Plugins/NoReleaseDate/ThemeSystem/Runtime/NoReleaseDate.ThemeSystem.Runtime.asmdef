@@ -1,0 +1,18 @@
+{
+    "name": "NoReleaseDate.ThemeSystem.Runtime",
+    "rootNamespace": "NoReleaseDate.ThemeSystem.Runtime",
+    "references": [
+        "GUID:26ec800c5551ad547a45c9ce3e908543",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:dcb6703bbf1c9124f9784957aa222c18"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

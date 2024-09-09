@@ -1,0 +1,17 @@
+{
+    "name": "IntuitiveBackSystem.Runtime",
+    "rootNamespace": "IntuitiveBackSystem",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:26ec800c5551ad547a45c9ce3e908543"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

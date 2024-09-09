@@ -1,0 +1,14 @@
+{
+    "name": "NoReleaseDate.Common.Runtime",
+    "rootNamespace": "NoReleaseDate.Common.Runtime",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

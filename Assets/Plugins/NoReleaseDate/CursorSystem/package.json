@@ -1,0 +1,11 @@
+﻿{
+  "name": "com.noreleasedate.cursorsystem",
+  "version": "1.0.0",
+  "displayName": "CursorSystem",
+  "description": "A simple cursor system for Unity.",
+  "unity": "2019.1",
+  "author": {
+    "name": "jfderegowski",
+    "url": "https://github.com/jfderegowski"
+  }
+}
