@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.UI.ProceduralImage;
 
 namespace UnityEditor.UI {
+#pragma warning disable 0618 // Disable warning for obsolete method
 	/// <summary>
 	/// This class adds a Menu Item "GameObject/UI/Procedural Image"
 	/// Bahviour of this command is the same as with regular Images
@@ -33,6 +34,7 @@ namespace UnityEditor.UI {
 				Selection.activeGameObject = o;
 			}
 		}
+#pragma warning restore 0618 // Re-enable the warning
 		/// <summary>
 		/// Replaces an Image Component with a Procedural Image Component.
 		/// </summary>

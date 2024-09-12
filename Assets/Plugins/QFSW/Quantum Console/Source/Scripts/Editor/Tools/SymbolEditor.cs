@@ -33,7 +33,8 @@ namespace QFSW.QC.Editor.Tools
         {
             AddSymbols(GetPresentBuildTargetGroups(), symbols);
         }
-
+        
+#pragma warning disable 0618 // Disable warning for obsolete method
         public static void AddSymbols(IEnumerable<BuildTargetGroup> groups, IEnumerable<string> symbols)
         {
             foreach (BuildTargetGroup group in groups)
@@ -50,6 +51,7 @@ namespace QFSW.QC.Editor.Tools
                 PlayerSettings.SetScriptingDefineSymbolsForGroup(group, currentSymbols);
             }
         }
+#pragma warning restore 0618 // Re-enable the warning
 
         public static void RemoveSymbol(string symbol)
         {
@@ -61,6 +63,7 @@ namespace QFSW.QC.Editor.Tools
             RemoveSymbols(GetPresentBuildTargetGroups(), symbols);
         }
 
+#pragma warning disable 0618 // Disable warning for obsolete method
         public static void RemoveSymbols(IEnumerable<BuildTargetGroup> groups, IEnumerable<string> symbols)
         {
             foreach (BuildTargetGroup group in groups)
@@ -75,5 +78,6 @@ namespace QFSW.QC.Editor.Tools
                 PlayerSettings.SetScriptingDefineSymbolsForGroup(group, currentSymbols);
             }
         }
+#pragma warning restore 0618 // Re-enable the warning
     }
 }

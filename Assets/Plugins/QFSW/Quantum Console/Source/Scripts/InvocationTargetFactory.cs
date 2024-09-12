@@ -27,7 +27,7 @@ namespace QFSW.QC
             {
                 case MonoTargetType.Single:
                 {
-                    Object target = Object.FindObjectOfType(classType);
+                    Object target = Object.FindFirstObjectByType(classType);
                     return target == null ? Enumerable.Empty<object>() : target.Yield();
                 }
                 case MonoTargetType.SingleInactive:
@@ -40,7 +40,7 @@ namespace QFSW.QC
                 }
                 case MonoTargetType.All:
                 {
-                    return Object.FindObjectsOfType(classType)
+                    return Object.FindObjectsByType(classType, FindObjectsSortMode.None)
                         .OrderBy(x => x.name, new AlphanumComparator());
                 }
                 case MonoTargetType.AllInactive:
