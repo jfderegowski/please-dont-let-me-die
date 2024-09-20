@@ -24,6 +24,7 @@ namespace QFSW.QC.Extras
             set => Screen.orientation = value;
         }
 
+        #pragma warning disable 0618
         [Command("current-resolution", "current resolution of the application or window.")]
         private static Resolution GetCurrentResolution()
         {
@@ -36,6 +37,7 @@ namespace QFSW.QC.Extras
 
             return resolution;
         }
+        #pragma warning restore 0618
 
         [Command("supported-resolutions", "all resolutions supported by this device in fullscreen mode.")]
         [CommandPlatform(Platform.AllPlatforms ^ Platform.WebGLPlayer)]

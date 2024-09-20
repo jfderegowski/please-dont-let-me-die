@@ -28,7 +28,7 @@ namespace QFSW.QC.Extras
 
         private void BindToConsoleInstance()
         {
-            if (!_consoleInstance) { _consoleInstance = FindObjectOfType<QuantumConsole>(); }
+            if (!_consoleInstance) { _consoleInstance = FindFirstObjectByType<QuantumConsole>(); }
             if (_consoleInstance)
             {
                 _consoleInstance.OnActivate += BlockInput;
