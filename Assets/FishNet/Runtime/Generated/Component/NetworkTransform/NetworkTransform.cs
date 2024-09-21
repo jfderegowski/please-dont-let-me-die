@@ -15,7 +15,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting;
 using static FishNet.Object.NetworkObject;
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace FishNet.Component.Transforming
 {

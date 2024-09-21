@@ -12,7 +12,6 @@ namespace UnityEditor.VSAttribution.HotReload
 		const string k_VendorKey = "unity.vsp-attribution";
 		const string k_EventName = "vspAttribution";
 
-#pragma warning disable 0618
 		static bool RegisterEvent()
 		{
 			AnalyticsResult result = EditorAnalytics.RegisterEventWithLimit(k_EventName, k_MaxEventsPerHour,
@@ -21,7 +20,6 @@ namespace UnityEditor.VSAttribution.HotReload
 			var isResultOk = result == AnalyticsResult.Ok;
 			return isResultOk;
 		}
-#pragma warning restore 0618
 
 		[Serializable]
 		struct VSAttributionData
@@ -58,9 +56,7 @@ namespace UnityEditor.VSAttribution.HotReload
 					extra = "{}"
 				};
 
-#pragma warning disable 0618
 				return EditorAnalytics.SendEventWithLimit(k_EventName, eventData, k_VersionId);
-#pragma warning restore 0618
 			}
 			catch
 			{

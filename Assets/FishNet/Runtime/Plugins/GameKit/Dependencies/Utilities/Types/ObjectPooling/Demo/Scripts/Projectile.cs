@@ -2,7 +2,6 @@
 using UnityEditor;
 #endif
 using UnityEngine;
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace GameKit.Dependencies.Utilities.ObjectPooling.Examples
 {

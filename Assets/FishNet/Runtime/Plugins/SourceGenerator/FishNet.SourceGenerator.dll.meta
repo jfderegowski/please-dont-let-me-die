@@ -85,10 +85,3 @@ PluginImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 207815
-  packageName: 'FishNet: Networking Evolved'
-  packageVersion: 4.4.5R
-  assetPath: Assets/FishNet/Runtime/Plugins/SourceGenerator/FishNet.SourceGenerator.dll
-  uploadId: 692047

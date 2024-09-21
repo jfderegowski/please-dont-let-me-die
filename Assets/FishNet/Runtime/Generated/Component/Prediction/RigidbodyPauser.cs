@@ -2,7 +2,6 @@
 using GameKit.Dependencies.Utilities;
 using System.Collections.Generic;
 using UnityEngine;
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace FishNet.Component.Prediction
 {
@@ -54,7 +53,7 @@ namespace FishNet.Component.Prediction
 
             public void Update(Rigidbody rb)
             {
-                Velocity = rb.linearVelocity;
+                Velocity = rb.velocity;
                 AngularVelocity = rb.angularVelocity;
                 IsKinematic = rb.isKinematic;
                 DetectCollisions = rb.detectCollisions;
@@ -103,7 +102,7 @@ namespace FishNet.Component.Prediction
 
             public void Update(Rigidbody2D rb)
             {
-                Velocity = rb.linearVelocity;
+                Velocity = rb.velocity;
                 AngularVelocity = rb.angularVelocity;
                 Simulated = rb.simulated;
                 IsKinematic = rb.isKinematic;
@@ -274,9 +273,7 @@ namespace FishNet.Component.Prediction
                     rbData.Update(rb);
                     _rigidbody2dDatas[index] = rbData;
                     rb.collisionDetectionMode = CollisionDetectionMode2D.Discrete;
-#pragma warning disable CS0618 // Type or member is obsolete
                     rb.isKinematic = true;
-#pragma warning restore CS0618 // Type or member is obsolete
                     rb.simulated = false;
 
                     return true;
@@ -320,7 +317,7 @@ namespace FishNet.Component.Prediction
                     rb.collisionDetectionMode = rbData.CollisionDetectionMode;
                     if (!rb.isKinematic)
                     {
-                        rb.linearVelocity = rbData.Velocity;
+                        rb.velocity = rbData.Velocity;
                         rb.angularVelocity = rbData.AngularVelocity;
                     }
                     return true;
@@ -346,16 +343,12 @@ namespace FishNet.Component.Prediction
                     if (rb == null)
                         return false;
 
-#pragma warning disable CS0618 // Type or member is obsolete
                     rb.isKinematic = rbData.IsKinematic;
-#pragma warning restore CS0618 // Type or member is obsolete
                     rb.simulated = rbData.Simulated;
                     rb.collisionDetectionMode = rbData.CollisionDetectionMode;
-#pragma warning disable CS0618 // Type or member is obsolete
                     if (!rb.isKinematic)
-#pragma warning restore CS0618 // Type or member is obsolete
                     {
-                        rb.linearVelocity = rbData.Velocity;
+                        rb.velocity = rbData.Velocity;
                         rb.angularVelocity = rbData.AngularVelocity;
                     }
                     return true;

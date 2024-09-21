@@ -3,7 +3,6 @@ using FishNet.Documenting;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace FishNet.Upgrading.Mirror.Editing
 {

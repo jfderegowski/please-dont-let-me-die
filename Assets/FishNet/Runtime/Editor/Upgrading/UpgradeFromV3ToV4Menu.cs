@@ -38,7 +38,6 @@ namespace FishNet.Editing.Upgrading
         }
 #endif
 
-#pragma warning disable CS0618
         private static bool RemoveOrAddDefine(string define, bool removeDefine)
         {
             string currentDefines = PlayerSettings.GetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup);
@@ -65,7 +64,6 @@ namespace FishNet.Editing.Upgrading
 
             return modified;
         }
-#pragma warning restore CS0618
 
 
 

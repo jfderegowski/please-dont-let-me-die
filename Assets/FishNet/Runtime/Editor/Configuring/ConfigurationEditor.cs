@@ -73,7 +73,6 @@ namespace FishNet.Editing
         #endregion
 
 
-#pragma warning disable CS0618
         private static bool RemoveOrAddDefine(string define, bool removeDefine)
         {
             string currentDefines = PlayerSettings.GetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup);
@@ -100,7 +99,6 @@ namespace FishNet.Editing
 
             return modified;
         }
-#pragma warning restore CS0618
 
 
     }

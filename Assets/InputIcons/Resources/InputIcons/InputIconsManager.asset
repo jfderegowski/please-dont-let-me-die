@@ -1,0 +1,1867 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab8ee0d4f7f91a4ca569ef0eacc2738, type: 3}
+  m_Name: InputIconsManager
+  m_EditorClassIdentifier: 
+  iconSetConfiguratorSO: {fileID: 11400000, guid: d9f6a2d5fd0df16419a30f0ab431893f, type: 2}
+  usedActionAssets:
+  - {fileID: -944628639613478452, guid: 595ef5e5235cea64298b2862c4e8f020, type: 3}
+  - {fileID: -944628639613478452, guid: 6fdcc8235e6240741910774828ef9d83, type: 3}
+  controlSchemeNames_Keyboard:
+  - Keyboard and Mouse
+  - Keyboard and Mouse 2
+  controlSchemeNames_Gamepad:
+  - Gamepad
+  - Gamepad 2
+  showAllInputOptionsInStyles: 0
+  tintingEnabled: 0
+  openingTag: 
+  closingTag: 
+  multipleInputsDelimiter: ' <size=80%>or</size> '
+  compositeInputDelimiter: ', '
+  automaticStyleSheetUpdatingEnabled: 1
+  textDisplayForUnboundActions: Undefined
+  textDisplayLanguage: 0
+  actionNameRenamings:
+  - originalString: delta
+    outputString: Mouse
+  - originalString: position
+    outputString: Mouse
+  - originalString: leftbutton
+    outputString: Left Mouse Button
+  - originalString: rightButton
+    outputString: Right  Mouse Button
+  defaultStartDeviceType: 0
+  gamepadIconDisplaySetting: 0
+  textUpdateOptions: 0
+  rebindBehaviour: 0
+  checkOnlySameActionMapsOnBindingRebound: 1
+  loadAndSaveInputBindingOverrides: 1
+  displayType: 0
+  deviceChangeDelay: 0.2
+  minGamepadStickMagnitudeForChange: 0.25
+  inputStyleKeyboardDataList:
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Move>
+    bindingName: Platformer Controls/Move
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="W"><sprite="Keyboard
+      and Mouse_Grey" name="A"><sprite="Keyboard and Mouse_Grey" name="S"><sprite="Keyboard
+      and Mouse_Grey" name="D"> <size=80%>or</size> <sprite="Keyboard and Mouse_Grey"
+      name="UPARROW"><sprite="Keyboard and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard
+      and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="W"><sprite="Keyboard
+      and Mouse_Grey" name="A"><sprite="Keyboard and Mouse_Grey" name="S"><sprite="Keyboard
+      and Mouse_Grey" name="D">
+    humanReadableString: W, A, S, D <size=80%>or</size> UPARROW, LEFTARROW, DOWNARROW,
+      RIGHTARROW
+    humanReadableString_singleInput: W, A, S, D
+    fontReferenceText: <style=font/Platformer Controls/Move>
+    fontCode: \uE970\uE90A\uE962\uE91A <size=80%>or</size> \uE90F\uE90D\uE90C\uE90E
+    fontCode_singleInput: \uE970\uE90A\uE962\uE91A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/up>
+    bindingName: Platformer Controls/Move/up
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="W"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="W">
+    humanReadableString: W <size=80%>or</size> UPARROW
+    humanReadableString_singleInput: W
+    fontReferenceText: <style=font/Platformer Controls/Move/up>
+    fontCode: \uE970 <size=80%>or</size> \uE90F
+    fontCode_singleInput: \uE970
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/left>
+    bindingName: Platformer Controls/Move/left
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="A"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="A">
+    humanReadableString: A <size=80%>or</size> LEFTARROW
+    humanReadableString_singleInput: A
+    fontReferenceText: <style=font/Platformer Controls/Move/left>
+    fontCode: \uE90A <size=80%>or</size> \uE90D
+    fontCode_singleInput: \uE90A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/down>
+    bindingName: Platformer Controls/Move/down
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="S"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="S">
+    humanReadableString: S <size=80%>or</size> DOWNARROW
+    humanReadableString_singleInput: S
+    fontReferenceText: <style=font/Platformer Controls/Move/down>
+    fontCode: \uE962 <size=80%>or</size> \uE90C
+    fontCode_singleInput: \uE962
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/right>
+    bindingName: Platformer Controls/Move/right
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="D"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="D">
+    humanReadableString: D <size=80%>or</size> RIGHTARROW
+    humanReadableString_singleInput: D
+    fontReferenceText: <style=font/Platformer Controls/Move/right>
+    fontCode: \uE91A <size=80%>or</size> \uE90E
+    fontCode_singleInput: \uE91A
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Move/2>
+    bindingName: Platformer Controls/Move/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="UPARROW"><sprite="Keyboard
+      and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard
+      and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="UPARROW"><sprite="Keyboard
+      and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard
+      and Mouse_Grey" name="RIGHTARROW">
+    humanReadableString: UPARROW, LEFTARROW, DOWNARROW, RIGHTARROW
+    humanReadableString_singleInput: UPARROW, LEFTARROW, DOWNARROW, RIGHTARROW
+    fontReferenceText: <style=font/Platformer Controls/Move/2>
+    fontCode: \uE90F\uE90D\uE90C\uE90E
+    fontCode_singleInput: \uE90F\uE90D\uE90C\uE90E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/up/2>
+    bindingName: Platformer Controls/Move/up/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="UPARROW">
+    humanReadableString: UPARROW
+    humanReadableString_singleInput: UPARROW
+    fontReferenceText: <style=font/Platformer Controls/Move/up/2>
+    fontCode: \uE90F
+    fontCode_singleInput: \uE90F
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/left/2>
+    bindingName: Platformer Controls/Move/left/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    humanReadableString: LEFTARROW
+    humanReadableString_singleInput: LEFTARROW
+    fontReferenceText: <style=font/Platformer Controls/Move/left/2>
+    fontCode: \uE90D
+    fontCode_singleInput: \uE90D
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/down/2>
+    bindingName: Platformer Controls/Move/down/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="DOWNARROW">
+    humanReadableString: DOWNARROW
+    humanReadableString_singleInput: DOWNARROW
+    fontReferenceText: <style=font/Platformer Controls/Move/down/2>
+    fontCode: \uE90C
+    fontCode_singleInput: \uE90C
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/right/2>
+    bindingName: Platformer Controls/Move/right/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    humanReadableString: RIGHTARROW
+    humanReadableString_singleInput: RIGHTARROW
+    fontReferenceText: <style=font/Platformer Controls/Move/right/2>
+    fontCode: \uE90E
+    fontCode_singleInput: \uE90E
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Look>
+    bindingName: Platformer Controls/Look
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="DELTA">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="DELTA">
+    humanReadableString: MOUSE
+    humanReadableString_singleInput: MOUSE
+    fontReferenceText: <style=font/Platformer Controls/Look>
+    fontCode: \uE941
+    fontCode_singleInput: \uE941
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump>
+    bindingName: Platformer Controls/Jump
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="SPACE"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="U"> <size=80%>or</size> <sprite="Keyboard
+      and Mouse_Grey" name="I">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="SPACE">
+    humanReadableString: SPACE <size=80%>or</size> U <size=80%>or</size> I
+    humanReadableString_singleInput: SPACE
+    fontReferenceText: <style=font/Platformer Controls/Jump>
+    fontCode: \uE967 <size=80%>or</size> \uE96C <size=80%>or</size> \uE932
+    fontCode_singleInput: \uE967
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump/2>
+    bindingName: Platformer Controls/Jump/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="U">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="U">
+    humanReadableString: U
+    humanReadableString_singleInput: U
+    fontReferenceText: <style=font/Platformer Controls/Jump/2>
+    fontCode: \uE96C
+    fontCode_singleInput: \uE96C
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump/3>
+    bindingName: Platformer Controls/Jump/3
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="I">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="I">
+    humanReadableString: I
+    humanReadableString_singleInput: I
+    fontReferenceText: <style=font/Platformer Controls/Jump/3>
+    fontCode: \uE932
+    fontCode_singleInput: \uE932
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack>
+    bindingName: Platformer Controls/Attack
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="LEFTBUTTON"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="Y">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="LEFTBUTTON">
+    humanReadableString: LEFT MOUSE BUTTON <size=80%>or</size> Y
+    humanReadableString_singleInput: LEFT MOUSE BUTTON
+    fontReferenceText: <style=font/Platformer Controls/Attack>
+    fontCode: \uE93E <size=80%>or</size> \uE973
+    fontCode_singleInput: \uE93E
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack/2>
+    bindingName: Platformer Controls/Attack/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Y">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Y">
+    humanReadableString: Y
+    humanReadableString_singleInput: Y
+    fontReferenceText: <style=font/Platformer Controls/Attack/2>
+    fontCode: \uE973
+    fontCode_singleInput: \uE973
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Switch Weapon>
+    bindingName: Platformer Controls/Switch Weapon
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="SCROLL/Y">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="SCROLL/Y">
+    humanReadableString: SCROLL/Y
+    humanReadableString_singleInput: SCROLL/Y
+    fontReferenceText: <style=font/Platformer Controls/Switch Weapon>
+    fontCode: \uE93F
+    fontCode_singleInput: \uE93F
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Pause>
+    bindingName: Platformer Controls/Pause
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="ESCAPE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="ESCAPE">
+    humanReadableString: ESCAPE
+    humanReadableString_singleInput: ESCAPE
+    fontReferenceText: <style=font/Platformer Controls/Pause>
+    fontCode: \uE920
+    fontCode_singleInput: \uE920
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Cancel>
+    bindingName: Platformer Controls/Cancel
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="*/{CANCEL}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="*/{CANCEL}">
+    humanReadableString: '*/{CANCEL}'
+    humanReadableString_singleInput: '*/{CANCEL}'
+    fontReferenceText: <style=font/Platformer Controls/Cancel>
+    fontCode: \uE920
+    fontCode_singleInput: \uE920
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Submit>
+    bindingName: Platformer Controls/Submit
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="*/{SUBMIT}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="*/{SUBMIT}">
+    humanReadableString: '*/{SUBMIT}'
+    humanReadableString_singleInput: '*/{SUBMIT}'
+    fontReferenceText: <style=font/Platformer Controls/Submit>
+    fontCode: \uE91E
+    fontCode_singleInput: \uE91E
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Interact>
+    bindingName: Platformer Controls/Interact
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="ENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="ENTER">
+    humanReadableString: ENTER
+    humanReadableString_singleInput: ENTER
+    fontReferenceText: <style=font/Platformer Controls/Interact>
+    fontCode: \uE91E
+    fontCode_singleInput: \uE91E
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Modifier Action>
+    bindingName: Platformer Controls/Modifier Action
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Q"><sprite="Keyboard
+      and Mouse_Grey" name="E">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Q"><sprite="Keyboard
+      and Mouse_Grey" name="E">
+    humanReadableString: Q, E
+    humanReadableString_singleInput: Q, E
+    fontReferenceText: <style=font/Platformer Controls/Modifier Action>
+    fontCode: \uE95D\uE91C
+    fontCode_singleInput: \uE95D\uE91C
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Action/modifier>
+    bindingName: Platformer Controls/Modifier Action/modifier
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Q">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Q">
+    humanReadableString: Q
+    humanReadableString_singleInput: Q
+    fontReferenceText: <style=font/Platformer Controls/Modifier Action/modifier>
+    fontCode: \uE95D
+    fontCode_singleInput: \uE95D
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Action/binding>
+    bindingName: Platformer Controls/Modifier Action/binding
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="E">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="E">
+    humanReadableString: E
+    humanReadableString_singleInput: E
+    fontReferenceText: <style=font/Platformer Controls/Modifier Action/binding>
+    fontCode: \uE91C
+    fontCode_singleInput: \uE91C
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Modifier Dual Action>
+    bindingName: Platformer Controls/Modifier Dual Action
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="X"><sprite="Keyboard
+      and Mouse_Grey" name="C"><sprite="Keyboard and Mouse_Grey" name="V">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="X"><sprite="Keyboard
+      and Mouse_Grey" name="C"><sprite="Keyboard and Mouse_Grey" name="V">
+    humanReadableString: X, C, V
+    humanReadableString_singleInput: X, C, V
+    fontReferenceText: <style=font/Platformer Controls/Modifier Dual Action>
+    fontCode: \uE972\uE915\uE96F
+    fontCode_singleInput: \uE972\uE915\uE96F
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Dual Action/modifier1>
+    bindingName: Platformer Controls/Modifier Dual Action/modifier1
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="X">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="X">
+    humanReadableString: X
+    humanReadableString_singleInput: X
+    fontReferenceText: <style=font/Platformer Controls/Modifier Dual Action/modifier1>
+    fontCode: \uE972
+    fontCode_singleInput: \uE972
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Dual Action/modifier2>
+    bindingName: Platformer Controls/Modifier Dual Action/modifier2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="C">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="C">
+    humanReadableString: C
+    humanReadableString_singleInput: C
+    fontReferenceText: <style=font/Platformer Controls/Modifier Dual Action/modifier2>
+    fontCode: \uE915
+    fontCode_singleInput: \uE915
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Dual Action/binding>
+    bindingName: Platformer Controls/Modifier Dual Action/binding
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="V">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="V">
+    humanReadableString: V
+    humanReadableString_singleInput: V
+    fontReferenceText: <style=font/Platformer Controls/Modifier Dual Action/binding>
+    fontCode: \uE96F
+    fontCode_singleInput: \uE96F
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action>
+    bindingName: Platformer Controls/Negative Positive Action
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE"> <size=80%>or</size> <sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE">
+    humanReadableString: 2, 1, 4, 3 <size=80%>or</size> 2, 1, 4, 3
+    humanReadableString_singleInput: 2, 1, 4, 3
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action>
+    fontCode: \uE96E\uE96E\uE96E\uE96E <size=80%>or</size> \uE96E\uE96E\uE96E\uE96E
+    fontCode_singleInput: \uE96E\uE96E\uE96E\uE96E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/positive>
+    bindingName: Platformer Controls/Negative Positive Action/positive
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    humanReadableString: 2 <size=80%>or</size> 4
+    humanReadableString_singleInput: 2
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/positive>
+    fontCode: \uE96E <size=80%>or</size> \uE96E
+    fontCode_singleInput: \uE96E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/negative>
+    bindingName: Platformer Controls/Negative Positive Action/negative
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    humanReadableString: 1 <size=80%>or</size> 3
+    humanReadableString_singleInput: 1
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/negative>
+    fontCode: \uE96E <size=80%>or</size> \uE96E
+    fontCode_singleInput: \uE96E
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/2>
+    bindingName: Platformer Controls/Negative Positive Action/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE"><sprite="Keyboard
+      and Mouse_Grey" name="FALLBACKSPRITE">
+    humanReadableString: 2, 1, 4, 3
+    humanReadableString_singleInput: 2, 1, 4, 3
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/2>
+    fontCode: \uE96E\uE96E\uE96E\uE96E
+    fontCode_singleInput: \uE96E\uE96E\uE96E\uE96E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/positive/2>
+    bindingName: Platformer Controls/Negative Positive Action/positive/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    humanReadableString: 4
+    humanReadableString_singleInput: 4
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/positive/2>
+    fontCode: \uE96E
+    fontCode_singleInput: \uE96E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/negative/2>
+    bindingName: Platformer Controls/Negative Positive Action/negative/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="FALLBACKSPRITE">
+    humanReadableString: 3
+    humanReadableString_singleInput: 3
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/negative/2>
+    fontCode: \uE96E
+    fontCode_singleInput: \uE96E
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Test Action>
+    bindingName: Platformer Controls/Test Action
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Y"><sprite="Keyboard
+      and Mouse_Grey" name="T"> <size=80%>or</size> <sprite="Keyboard and Mouse_Grey"
+      name="G">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Y"><sprite="Keyboard
+      and Mouse_Grey" name="T">
+    humanReadableString: Y, T <size=80%>or</size> G
+    humanReadableString_singleInput: Y, T
+    fontReferenceText: <style=font/Platformer Controls/Test Action>
+    fontCode: \uE973\uE969 <size=80%>or</size> \uE92F
+    fontCode_singleInput: \uE973\uE969
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Test Action/negative>
+    bindingName: Platformer Controls/Test Action/negative
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Y">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Y">
+    humanReadableString: Y
+    humanReadableString_singleInput: Y
+    fontReferenceText: <style=font/Platformer Controls/Test Action/negative>
+    fontCode: \uE973
+    fontCode_singleInput: \uE973
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Test Action/positive>
+    bindingName: Platformer Controls/Test Action/positive
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="T">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="T">
+    humanReadableString: T
+    humanReadableString_singleInput: T
+    fontReferenceText: <style=font/Platformer Controls/Test Action/positive>
+    fontCode: \uE969
+    fontCode_singleInput: \uE969
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Test Action/2>
+    bindingName: Platformer Controls/Test Action/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="G">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="G">
+    humanReadableString: G
+    humanReadableString_singleInput: G
+    fontReferenceText: <style=font/Platformer Controls/Test Action/2>
+    fontCode: \uE92F
+    fontCode_singleInput: \uE92F
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Move>
+    bindingName: Helicopter Controls/Move
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="W"><sprite="Keyboard
+      and Mouse_Grey" name="A"><sprite="Keyboard and Mouse_Grey" name="S"><sprite="Keyboard
+      and Mouse_Grey" name="D">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="W"><sprite="Keyboard
+      and Mouse_Grey" name="A"><sprite="Keyboard and Mouse_Grey" name="S"><sprite="Keyboard
+      and Mouse_Grey" name="D">
+    humanReadableString: W, A, S, D
+    humanReadableString_singleInput: W, A, S, D
+    fontReferenceText: <style=font/Helicopter Controls/Move>
+    fontCode: \uE970\uE90A\uE962\uE91A
+    fontCode_singleInput: \uE970\uE90A\uE962\uE91A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/up>
+    bindingName: Helicopter Controls/Move/up
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="W">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="W">
+    humanReadableString: W
+    humanReadableString_singleInput: W
+    fontReferenceText: <style=font/Helicopter Controls/Move/up>
+    fontCode: \uE970
+    fontCode_singleInput: \uE970
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/left>
+    bindingName: Helicopter Controls/Move/left
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="A">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="A">
+    humanReadableString: A
+    humanReadableString_singleInput: A
+    fontReferenceText: <style=font/Helicopter Controls/Move/left>
+    fontCode: \uE90A
+    fontCode_singleInput: \uE90A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/down>
+    bindingName: Helicopter Controls/Move/down
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="S">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="S">
+    humanReadableString: S
+    humanReadableString_singleInput: S
+    fontReferenceText: <style=font/Helicopter Controls/Move/down>
+    fontCode: \uE962
+    fontCode_singleInput: \uE962
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/right>
+    bindingName: Helicopter Controls/Move/right
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="D">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="D">
+    humanReadableString: D
+    humanReadableString_singleInput: D
+    fontReferenceText: <style=font/Helicopter Controls/Move/right>
+    fontCode: \uE91A
+    fontCode_singleInput: \uE91A
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Rotate>
+    bindingName: Helicopter Controls/Rotate
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard
+      and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard
+      and Mouse_Grey" name="RIGHTARROW">
+    humanReadableString: LEFTARROW, RIGHTARROW
+    humanReadableString_singleInput: LEFTARROW, RIGHTARROW
+    fontReferenceText: <style=font/Helicopter Controls/Rotate>
+    fontCode: \uE90D\uE90E
+    fontCode_singleInput: \uE90D\uE90E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Rotate/left>
+    bindingName: Helicopter Controls/Rotate/left
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    humanReadableString: LEFTARROW
+    humanReadableString_singleInput: LEFTARROW
+    fontReferenceText: <style=font/Helicopter Controls/Rotate/left>
+    fontCode: \uE90D
+    fontCode_singleInput: \uE90D
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Rotate/right>
+    bindingName: Helicopter Controls/Rotate/right
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    humanReadableString: RIGHTARROW
+    humanReadableString_singleInput: RIGHTARROW
+    fontReferenceText: <style=font/Helicopter Controls/Rotate/right>
+    fontCode: \uE90E
+    fontCode_singleInput: \uE90E
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Throw Bomb>
+    bindingName: Helicopter Controls/Throw Bomb
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="SPACE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="SPACE">
+    humanReadableString: SPACE
+    humanReadableString_singleInput: SPACE
+    fontReferenceText: <style=font/Helicopter Controls/Throw Bomb>
+    fontCode: \uE967
+    fontCode_singleInput: \uE967
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Next Weapon>
+    bindingName: Helicopter Controls/Next Weapon
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="E">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="E">
+    humanReadableString: E
+    humanReadableString_singleInput: E
+    fontReferenceText: <style=font/Helicopter Controls/Next Weapon>
+    fontCode: \uE91C
+    fontCode_singleInput: \uE91C
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Previous Weapon>
+    bindingName: Helicopter Controls/Previous Weapon
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Q">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Q">
+    humanReadableString: Q
+    humanReadableString_singleInput: Q
+    fontReferenceText: <style=font/Helicopter Controls/Previous Weapon>
+    fontCode: \uE95D
+    fontCode_singleInput: \uE95D
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Pause>
+    bindingName: Helicopter Controls/Pause
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="ESCAPE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="ESCAPE">
+    humanReadableString: ESCAPE
+    humanReadableString_singleInput: ESCAPE
+    fontReferenceText: <style=font/Helicopter Controls/Pause>
+    fontCode: \uE920
+    fontCode_singleInput: \uE920
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Navigate>
+    bindingName: Menu Controls/Navigate
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="W"><sprite="Keyboard
+      and Mouse_Grey" name="A"><sprite="Keyboard and Mouse_Grey" name="S"><sprite="Keyboard
+      and Mouse_Grey" name="D"> <size=80%>or</size> <sprite="Keyboard and Mouse_Grey"
+      name="UPARROW"><sprite="Keyboard and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard
+      and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="W"><sprite="Keyboard
+      and Mouse_Grey" name="A"><sprite="Keyboard and Mouse_Grey" name="S"><sprite="Keyboard
+      and Mouse_Grey" name="D">
+    humanReadableString: W, A, S, D <size=80%>or</size> UPARROW, DOWNARROW, LEFTARROW,
+      RIGHTARROW
+    humanReadableString_singleInput: W, A, S, D
+    fontReferenceText: <style=font/Menu Controls/Navigate>
+    fontCode: \uE970\uE90A\uE962\uE91A <size=80%>or</size> \uE90F\uE90C\uE90D\uE90E
+    fontCode_singleInput: \uE970\uE90A\uE962\uE91A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/up>
+    bindingName: Menu Controls/Navigate/up
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="W"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="W">
+    humanReadableString: W <size=80%>or</size> UPARROW
+    humanReadableString_singleInput: W
+    fontReferenceText: <style=font/Menu Controls/Navigate/up>
+    fontCode: \uE970 <size=80%>or</size> \uE90F
+    fontCode_singleInput: \uE970
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/left>
+    bindingName: Menu Controls/Navigate/left
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="A"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="A">
+    humanReadableString: A <size=80%>or</size> LEFTARROW
+    humanReadableString_singleInput: A
+    fontReferenceText: <style=font/Menu Controls/Navigate/left>
+    fontCode: \uE90A <size=80%>or</size> \uE90D
+    fontCode_singleInput: \uE90A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/down>
+    bindingName: Menu Controls/Navigate/down
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="S"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="S">
+    humanReadableString: S <size=80%>or</size> DOWNARROW
+    humanReadableString_singleInput: S
+    fontReferenceText: <style=font/Menu Controls/Navigate/down>
+    fontCode: \uE962 <size=80%>or</size> \uE90C
+    fontCode_singleInput: \uE962
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/right>
+    bindingName: Menu Controls/Navigate/right
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="D"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="D">
+    humanReadableString: D <size=80%>or</size> RIGHTARROW
+    humanReadableString_singleInput: D
+    fontReferenceText: <style=font/Menu Controls/Navigate/right>
+    fontCode: \uE91A <size=80%>or</size> \uE90E
+    fontCode_singleInput: \uE91A
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Navigate/2>
+    bindingName: Menu Controls/Navigate/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="UPARROW"><sprite="Keyboard
+      and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard
+      and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="UPARROW"><sprite="Keyboard
+      and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard
+      and Mouse_Grey" name="RIGHTARROW">
+    humanReadableString: UPARROW, DOWNARROW, LEFTARROW, RIGHTARROW
+    humanReadableString_singleInput: UPARROW, DOWNARROW, LEFTARROW, RIGHTARROW
+    fontReferenceText: <style=font/Menu Controls/Navigate/2>
+    fontCode: \uE90F\uE90C\uE90D\uE90E
+    fontCode_singleInput: \uE90F\uE90C\uE90D\uE90E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/up/2>
+    bindingName: Menu Controls/Navigate/up/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="UPARROW">
+    humanReadableString: UPARROW
+    humanReadableString_singleInput: UPARROW
+    fontReferenceText: <style=font/Menu Controls/Navigate/up/2>
+    fontCode: \uE90F
+    fontCode_singleInput: \uE90F
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/down/2>
+    bindingName: Menu Controls/Navigate/down/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="DOWNARROW">
+    humanReadableString: DOWNARROW
+    humanReadableString_singleInput: DOWNARROW
+    fontReferenceText: <style=font/Menu Controls/Navigate/down/2>
+    fontCode: \uE90C
+    fontCode_singleInput: \uE90C
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/left/2>
+    bindingName: Menu Controls/Navigate/left/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    humanReadableString: LEFTARROW
+    humanReadableString_singleInput: LEFTARROW
+    fontReferenceText: <style=font/Menu Controls/Navigate/left/2>
+    fontCode: \uE90D
+    fontCode_singleInput: \uE90D
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/right/2>
+    bindingName: Menu Controls/Navigate/right/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    humanReadableString: RIGHTARROW
+    humanReadableString_singleInput: RIGHTARROW
+    fontReferenceText: <style=font/Menu Controls/Navigate/right/2>
+    fontCode: \uE90E
+    fontCode_singleInput: \uE90E
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Left Click>
+    bindingName: Menu Controls/Left Click
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="LEFTBUTTON">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="LEFTBUTTON">
+    humanReadableString: LEFT MOUSE BUTTON
+    humanReadableString_singleInput: LEFT MOUSE BUTTON
+    fontReferenceText: <style=font/Menu Controls/Left Click>
+    fontCode: \uE93E
+    fontCode_singleInput: \uE93E
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Point>
+    bindingName: Menu Controls/Point
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="POSITION">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="POSITION">
+    humanReadableString: MOUSE
+    humanReadableString_singleInput: MOUSE
+    fontReferenceText: <style=font/Menu Controls/Point>
+    fontCode: \uE941
+    fontCode_singleInput: \uE941
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Submit>
+    bindingName: Menu Controls/Submit
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="*/{SUBMIT}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="*/{SUBMIT}">
+    humanReadableString: '*/{SUBMIT}'
+    humanReadableString_singleInput: '*/{SUBMIT}'
+    fontReferenceText: <style=font/Menu Controls/Submit>
+    fontCode: \uE91E
+    fontCode_singleInput: \uE91E
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Cancel>
+    bindingName: Menu Controls/Cancel
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="*/{CANCEL}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="*/{CANCEL}">
+    humanReadableString: '*/{CANCEL}'
+    humanReadableString_singleInput: '*/{CANCEL}'
+    fontReferenceText: <style=font/Menu Controls/Cancel>
+    fontCode: \uE920
+    fontCode_singleInput: \uE920
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Pause>
+    bindingName: Menu Controls/Pause
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="ESCAPE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="ESCAPE">
+    humanReadableString: ESCAPE
+    humanReadableString_singleInput: ESCAPE
+    fontReferenceText: <style=font/Menu Controls/Pause>
+    fontCode: \uE920
+    fontCode_singleInput: \uE920
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Cancel>
+    bindingName: Multiplayer Platformer Controls/Cancel
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="*/{CANCEL}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="*/{CANCEL}">
+    humanReadableString: '*/{CANCEL}'
+    humanReadableString_singleInput: '*/{CANCEL}'
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Cancel>
+    fontCode: \uE920
+    fontCode_singleInput: \uE920
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Submit>
+    bindingName: Multiplayer Platformer Controls/Submit
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="*/{SUBMIT}">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="*/{SUBMIT}">
+    humanReadableString: '*/{SUBMIT}'
+    humanReadableString_singleInput: '*/{SUBMIT}'
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Submit>
+    fontCode: \uE91E
+    fontCode_singleInput: \uE91E
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move>
+    bindingName: Multiplayer Platformer Controls/Move
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="W"><sprite="Keyboard
+      and Mouse_Grey" name="A"><sprite="Keyboard and Mouse_Grey" name="S"><sprite="Keyboard
+      and Mouse_Grey" name="D"> <size=80%>or</size> <sprite="Keyboard and Mouse_Grey"
+      name="UPARROW"><sprite="Keyboard and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard
+      and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+      <size=80%>or</size> <sprite="Keyboard and Mouse_Grey" name="Y"><sprite="Keyboard
+      and Mouse_Grey" name="G"><sprite="Keyboard and Mouse_Grey" name="H"><sprite="Keyboard
+      and Mouse_Grey" name="J">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="W"><sprite="Keyboard
+      and Mouse_Grey" name="A"><sprite="Keyboard and Mouse_Grey" name="S"><sprite="Keyboard
+      and Mouse_Grey" name="D">
+    humanReadableString: W, A, S, D <size=80%>or</size> UPARROW, LEFTARROW, DOWNARROW,
+      RIGHTARROW <size=80%>or</size> Y, G, H, J
+    humanReadableString_singleInput: W, A, S, D
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move>
+    fontCode: \uE970\uE90A\uE962\uE91A <size=80%>or</size> \uE90F\uE90D\uE90C\uE90E
+      <size=80%>or</size> \uE973\uE92F\uE930\uE934
+    fontCode_singleInput: \uE970\uE90A\uE962\uE91A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/up>
+    bindingName: Multiplayer Platformer Controls/Move/up
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="W"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="UPARROW"> <size=80%>or</size> <sprite="Keyboard
+      and Mouse_Grey" name="Y">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="W">
+    humanReadableString: W <size=80%>or</size> UPARROW <size=80%>or</size> Y
+    humanReadableString_singleInput: W
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/up>
+    fontCode: \uE970 <size=80%>or</size> \uE90F <size=80%>or</size> \uE973
+    fontCode_singleInput: \uE970
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/left>
+    bindingName: Multiplayer Platformer Controls/Move/left
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="A"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="LEFTARROW"> <size=80%>or</size> <sprite="Keyboard
+      and Mouse_Grey" name="G">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="A">
+    humanReadableString: A <size=80%>or</size> LEFTARROW <size=80%>or</size> G
+    humanReadableString_singleInput: A
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/left>
+    fontCode: \uE90A <size=80%>or</size> \uE90D <size=80%>or</size> \uE92F
+    fontCode_singleInput: \uE90A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/down>
+    bindingName: Multiplayer Platformer Controls/Move/down
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="S"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="DOWNARROW"> <size=80%>or</size> <sprite="Keyboard
+      and Mouse_Grey" name="H">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="S">
+    humanReadableString: S <size=80%>or</size> DOWNARROW <size=80%>or</size> H
+    humanReadableString_singleInput: S
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/down>
+    fontCode: \uE962 <size=80%>or</size> \uE90C <size=80%>or</size> \uE930
+    fontCode_singleInput: \uE962
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/right>
+    bindingName: Multiplayer Platformer Controls/Move/right
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="D"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW"> <size=80%>or</size> <sprite="Keyboard
+      and Mouse_Grey" name="J">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="D">
+    humanReadableString: D <size=80%>or</size> RIGHTARROW <size=80%>or</size> J
+    humanReadableString_singleInput: D
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/right>
+    fontCode: \uE91A <size=80%>or</size> \uE90E <size=80%>or</size> \uE934
+    fontCode_singleInput: \uE91A
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Look>
+    bindingName: Multiplayer Platformer Controls/Look
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="DELTA">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="DELTA">
+    humanReadableString: MOUSE
+    humanReadableString_singleInput: MOUSE
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Look>
+    fontCode: \uE941
+    fontCode_singleInput: \uE941
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Jump>
+    bindingName: Multiplayer Platformer Controls/Jump
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="E"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="RIGHTSHIFT">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="E">
+    humanReadableString: E <size=80%>or</size> RIGHTSHIFT
+    humanReadableString_singleInput: E
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Jump>
+    fontCode: \uE91C <size=80%>or</size> \uE965
+    fontCode_singleInput: \uE91C
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Attack>
+    bindingName: Multiplayer Platformer Controls/Attack
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Q"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="ENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Q">
+    humanReadableString: Q <size=80%>or</size> ENTER
+    humanReadableString_singleInput: Q
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Attack>
+    fontCode: \uE95D <size=80%>or</size> \uE91E
+    fontCode_singleInput: \uE95D
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Pause>
+    bindingName: Multiplayer Platformer Controls/Pause
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="ESCAPE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="ESCAPE">
+    humanReadableString: ESCAPE
+    humanReadableString_singleInput: ESCAPE
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Pause>
+    fontCode: \uE920
+    fontCode_singleInput: \uE920
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/JoinAction>
+    bindingName: Multiplayer Platformer Controls/JoinAction
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Q"> <size=80%>or</size>
+      <sprite="Keyboard and Mouse_Grey" name="ENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Q">
+    humanReadableString: Q <size=80%>or</size> ENTER
+    humanReadableString_singleInput: Q
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/JoinAction>
+    fontCode: \uE95D <size=80%>or</size> \uE91E
+    fontCode_singleInput: \uE95D
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/2>
+    bindingName: Multiplayer Platformer Controls/Move/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="UPARROW"><sprite="Keyboard
+      and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard
+      and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="UPARROW"><sprite="Keyboard
+      and Mouse_Grey" name="LEFTARROW"><sprite="Keyboard and Mouse_Grey" name="DOWNARROW"><sprite="Keyboard
+      and Mouse_Grey" name="RIGHTARROW">
+    humanReadableString: UPARROW, LEFTARROW, DOWNARROW, RIGHTARROW
+    humanReadableString_singleInput: UPARROW, LEFTARROW, DOWNARROW, RIGHTARROW
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/2>
+    fontCode: \uE90F\uE90D\uE90C\uE90E
+    fontCode_singleInput: \uE90F\uE90D\uE90C\uE90E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/up/2>
+    bindingName: Multiplayer Platformer Controls/Move/up/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="UPARROW">
+    humanReadableString: UPARROW
+    humanReadableString_singleInput: UPARROW
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/up/2>
+    fontCode: \uE90F
+    fontCode_singleInput: \uE90F
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/left/2>
+    bindingName: Multiplayer Platformer Controls/Move/left/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="LEFTARROW">
+    humanReadableString: LEFTARROW
+    humanReadableString_singleInput: LEFTARROW
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/left/2>
+    fontCode: \uE90D
+    fontCode_singleInput: \uE90D
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/down/2>
+    bindingName: Multiplayer Platformer Controls/Move/down/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="DOWNARROW">
+    humanReadableString: DOWNARROW
+    humanReadableString_singleInput: DOWNARROW
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/down/2>
+    fontCode: \uE90C
+    fontCode_singleInput: \uE90C
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/right/2>
+    bindingName: Multiplayer Platformer Controls/Move/right/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="RIGHTARROW">
+    humanReadableString: RIGHTARROW
+    humanReadableString_singleInput: RIGHTARROW
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/right/2>
+    fontCode: \uE90E
+    fontCode_singleInput: \uE90E
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/3>
+    bindingName: Multiplayer Platformer Controls/Move/3
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Y"><sprite="Keyboard
+      and Mouse_Grey" name="G"><sprite="Keyboard and Mouse_Grey" name="H"><sprite="Keyboard
+      and Mouse_Grey" name="J">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Y"><sprite="Keyboard
+      and Mouse_Grey" name="G"><sprite="Keyboard and Mouse_Grey" name="H"><sprite="Keyboard
+      and Mouse_Grey" name="J">
+    humanReadableString: Y, G, H, J
+    humanReadableString_singleInput: Y, G, H, J
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/3>
+    fontCode: \uE973\uE92F\uE930\uE934
+    fontCode_singleInput: \uE973\uE92F\uE930\uE934
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/up/3>
+    bindingName: Multiplayer Platformer Controls/Move/up/3
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="Y">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="Y">
+    humanReadableString: Y
+    humanReadableString_singleInput: Y
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/up/3>
+    fontCode: \uE973
+    fontCode_singleInput: \uE973
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/left/3>
+    bindingName: Multiplayer Platformer Controls/Move/left/3
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="G">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="G">
+    humanReadableString: G
+    humanReadableString_singleInput: G
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/left/3>
+    fontCode: \uE92F
+    fontCode_singleInput: \uE92F
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/down/3>
+    bindingName: Multiplayer Platformer Controls/Move/down/3
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="H">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="H">
+    humanReadableString: H
+    humanReadableString_singleInput: H
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/down/3>
+    fontCode: \uE930
+    fontCode_singleInput: \uE930
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/right/3>
+    bindingName: Multiplayer Platformer Controls/Move/right/3
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="J">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="J">
+    humanReadableString: J
+    humanReadableString_singleInput: J
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/right/3>
+    fontCode: \uE934
+    fontCode_singleInput: \uE934
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Jump/2>
+    bindingName: Multiplayer Platformer Controls/Jump/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="RIGHTSHIFT">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="RIGHTSHIFT">
+    humanReadableString: RIGHTSHIFT
+    humanReadableString_singleInput: RIGHTSHIFT
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Jump/2>
+    fontCode: \uE965
+    fontCode_singleInput: \uE965
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Attack/2>
+    bindingName: Multiplayer Platformer Controls/Attack/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="ENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="ENTER">
+    humanReadableString: ENTER
+    humanReadableString_singleInput: ENTER
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Attack/2>
+    fontCode: \uE91E
+    fontCode_singleInput: \uE91E
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/JoinAction/2>
+    bindingName: Multiplayer Platformer Controls/JoinAction/2
+    inputStyleString: <sprite="Keyboard and Mouse_Grey" name="ENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse_Grey" name="ENTER">
+    humanReadableString: ENTER
+    humanReadableString_singleInput: ENTER
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/JoinAction/2>
+    fontCode: \uE91E
+    fontCode_singleInput: \uE91E
+  inputStyleGamepadDataList:
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Move>
+    bindingName: Platformer Controls/Move
+    inputStyleString: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/LEFT"><sprite="XBox"
+      name="D-PAD/DOWN"><sprite="XBox" name="D-PAD/RIGHT"> <size=80%>or</size> <sprite="XBox"
+      name="LEFT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/LEFT"><sprite="XBox"
+      name="D-PAD/DOWN"><sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/UP, D-PAD/LEFT, D-PAD/DOWN, D-PAD/RIGHT <size=80%>or</size>
+      LEFT STICK
+    humanReadableString_singleInput: D-PAD/UP, D-PAD/LEFT, D-PAD/DOWN, D-PAD/RIGHT
+    fontReferenceText: <style=font/Platformer Controls/Move>
+    fontCode: \uE908\uE906\uE905\uE907 <size=80%>or</size> \uE90B
+    fontCode_singleInput: \uE908\uE906\uE905\uE907
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/up>
+    bindingName: Platformer Controls/Move/up
+    inputStyleString: <sprite="XBox" name="D-PAD/UP">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP">
+    humanReadableString: D-PAD/UP
+    humanReadableString_singleInput: D-PAD/UP
+    fontReferenceText: <style=font/Platformer Controls/Move/up>
+    fontCode: \uE908
+    fontCode_singleInput: \uE908
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/left>
+    bindingName: Platformer Controls/Move/left
+    inputStyleString: <sprite="XBox" name="D-PAD/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/LEFT">
+    humanReadableString: D-PAD/LEFT
+    humanReadableString_singleInput: D-PAD/LEFT
+    fontReferenceText: <style=font/Platformer Controls/Move/left>
+    fontCode: \uE906
+    fontCode_singleInput: \uE906
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/down>
+    bindingName: Platformer Controls/Move/down
+    inputStyleString: <sprite="XBox" name="D-PAD/DOWN">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/DOWN">
+    humanReadableString: D-PAD/DOWN
+    humanReadableString_singleInput: D-PAD/DOWN
+    fontReferenceText: <style=font/Platformer Controls/Move/down>
+    fontCode: \uE905
+    fontCode_singleInput: \uE905
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Move/right>
+    bindingName: Platformer Controls/Move/right
+    inputStyleString: <sprite="XBox" name="D-PAD/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/RIGHT
+    humanReadableString_singleInput: D-PAD/RIGHT
+    fontReferenceText: <style=font/Platformer Controls/Move/right>
+    fontCode: \uE907
+    fontCode_singleInput: \uE907
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Move/2>
+    bindingName: Platformer Controls/Move/2
+    inputStyleString: <sprite="XBox" name="LEFT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK">
+    humanReadableString: LEFT STICK
+    humanReadableString_singleInput: LEFT STICK
+    fontReferenceText: <style=font/Platformer Controls/Move/2>
+    fontCode: \uE90B
+    fontCode_singleInput: \uE90B
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Look>
+    bindingName: Platformer Controls/Look
+    inputStyleString: <sprite="XBox" name="RIGHT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK">
+    humanReadableString: RIGHT STICK
+    humanReadableString_singleInput: RIGHT STICK
+    fontReferenceText: <style=font/Platformer Controls/Look>
+    fontCode: \uE913
+    fontCode_singleInput: \uE913
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump>
+    bindingName: Platformer Controls/Jump
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH"> <size=80%>or</size> <sprite="XBox"
+      name="RIGHT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH <size=80%>or</size> RIGHT SHOULDER
+    humanReadableString_singleInput: BUTTON SOUTH
+    fontReferenceText: <style=font/Platformer Controls/Jump>
+    fontCode: \uE902 <size=80%>or</size> \uE911
+    fontCode_singleInput: \uE902
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Jump/2>
+    bindingName: Platformer Controls/Jump/2
+    inputStyleString: <sprite="XBox" name="RIGHT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT SHOULDER">
+    humanReadableString: RIGHT SHOULDER
+    humanReadableString_singleInput: RIGHT SHOULDER
+    fontReferenceText: <style=font/Platformer Controls/Jump/2>
+    fontCode: \uE911
+    fontCode_singleInput: \uE911
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack>
+    bindingName: Platformer Controls/Attack
+    inputStyleString: <sprite="XBox" name="BUTTON WEST"> <size=80%>or</size> <sprite="XBox"
+      name="RIGHT TRIGGER">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON WEST">
+    humanReadableString: BUTTON WEST <size=80%>or</size> RIGHT TRIGGER
+    humanReadableString_singleInput: BUTTON WEST
+    fontReferenceText: <style=font/Platformer Controls/Attack>
+    fontCode: \uE903 <size=80%>or</size> \uE912
+    fontCode_singleInput: \uE903
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Attack/2>
+    bindingName: Platformer Controls/Attack/2
+    inputStyleString: <sprite="XBox" name="RIGHT TRIGGER">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT TRIGGER">
+    humanReadableString: RIGHT TRIGGER
+    humanReadableString_singleInput: RIGHT TRIGGER
+    fontReferenceText: <style=font/Platformer Controls/Attack/2>
+    fontCode: \uE912
+    fontCode_singleInput: \uE912
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Switch Weapon>
+    bindingName: Platformer Controls/Switch Weapon
+    inputStyleString: <sprite="XBox" name="RIGHT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK">
+    humanReadableString: RIGHT STICK
+    humanReadableString_singleInput: RIGHT STICK
+    fontReferenceText: <style=font/Platformer Controls/Switch Weapon>
+    fontCode: \uE913
+    fontCode_singleInput: \uE913
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Pause>
+    bindingName: Platformer Controls/Pause
+    inputStyleString: <sprite="XBox" name="START">
+    inputStyleString_singleInput: <sprite="XBox" name="START">
+    humanReadableString: START
+    humanReadableString_singleInput: START
+    fontReferenceText: <style=font/Platformer Controls/Pause>
+    fontCode: \uE91C
+    fontCode_singleInput: \uE91C
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Cancel>
+    bindingName: Platformer Controls/Cancel
+    inputStyleString: <sprite="XBox" name="CANCEL">
+    inputStyleString_singleInput: <sprite="XBox" name="CANCEL">
+    humanReadableString: CANCEL
+    humanReadableString_singleInput: CANCEL
+    fontReferenceText: <style=font/Platformer Controls/Cancel>
+    fontCode: \uE900
+    fontCode_singleInput: \uE900
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Submit>
+    bindingName: Platformer Controls/Submit
+    inputStyleString: <sprite="XBox" name="SUBMIT">
+    inputStyleString_singleInput: <sprite="XBox" name="SUBMIT">
+    humanReadableString: SUBMIT
+    humanReadableString_singleInput: SUBMIT
+    fontReferenceText: <style=font/Platformer Controls/Submit>
+    fontCode: \uE902
+    fontCode_singleInput: \uE902
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Interact>
+    bindingName: Platformer Controls/Interact
+    inputStyleString: <sprite="XBox" name="BUTTON NORTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON NORTH">
+    humanReadableString: BUTTON NORTH
+    humanReadableString_singleInput: BUTTON NORTH
+    fontReferenceText: <style=font/Platformer Controls/Interact>
+    fontCode: \uE901
+    fontCode_singleInput: \uE901
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Modifier Action>
+    bindingName: Platformer Controls/Modifier Action
+    inputStyleString: <sprite="XBox" name="RIGHT TRIGGER"><sprite="XBox" name="BUTTON
+      WEST">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT TRIGGER"><sprite="XBox"
+      name="BUTTON WEST">
+    humanReadableString: RIGHT TRIGGER, BUTTON WEST
+    humanReadableString_singleInput: RIGHT TRIGGER, BUTTON WEST
+    fontReferenceText: <style=font/Platformer Controls/Modifier Action>
+    fontCode: \uE912\uE903
+    fontCode_singleInput: \uE912\uE903
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Action/modifier>
+    bindingName: Platformer Controls/Modifier Action/modifier
+    inputStyleString: <sprite="XBox" name="RIGHT TRIGGER">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT TRIGGER">
+    humanReadableString: RIGHT TRIGGER
+    humanReadableString_singleInput: RIGHT TRIGGER
+    fontReferenceText: <style=font/Platformer Controls/Modifier Action/modifier>
+    fontCode: \uE912
+    fontCode_singleInput: \uE912
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Action/binding>
+    bindingName: Platformer Controls/Modifier Action/binding
+    inputStyleString: <sprite="XBox" name="BUTTON WEST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON WEST">
+    humanReadableString: BUTTON WEST
+    humanReadableString_singleInput: BUTTON WEST
+    fontReferenceText: <style=font/Platformer Controls/Modifier Action/binding>
+    fontCode: \uE903
+    fontCode_singleInput: \uE903
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Modifier Dual Action>
+    bindingName: Platformer Controls/Modifier Dual Action
+    inputStyleString: <sprite="XBox" name="RIGHT TRIGGER"><sprite="XBox" name="LEFT
+      TRIGGER"><sprite="XBox" name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT TRIGGER"><sprite="XBox"
+      name="LEFT TRIGGER"><sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: RIGHT TRIGGER, LEFT TRIGGER, BUTTON SOUTH
+    humanReadableString_singleInput: RIGHT TRIGGER, LEFT TRIGGER, BUTTON SOUTH
+    fontReferenceText: <style=font/Platformer Controls/Modifier Dual Action>
+    fontCode: \uE912\uE90A\uE902
+    fontCode_singleInput: \uE912\uE90A\uE902
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Dual Action/modifier1>
+    bindingName: Platformer Controls/Modifier Dual Action/modifier1
+    inputStyleString: <sprite="XBox" name="RIGHT TRIGGER">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT TRIGGER">
+    humanReadableString: RIGHT TRIGGER
+    humanReadableString_singleInput: RIGHT TRIGGER
+    fontReferenceText: <style=font/Platformer Controls/Modifier Dual Action/modifier1>
+    fontCode: \uE912
+    fontCode_singleInput: \uE912
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Dual Action/modifier2>
+    bindingName: Platformer Controls/Modifier Dual Action/modifier2
+    inputStyleString: <sprite="XBox" name="LEFT TRIGGER">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT TRIGGER">
+    humanReadableString: LEFT TRIGGER
+    humanReadableString_singleInput: LEFT TRIGGER
+    fontReferenceText: <style=font/Platformer Controls/Modifier Dual Action/modifier2>
+    fontCode: \uE90A
+    fontCode_singleInput: \uE90A
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Modifier Dual Action/binding>
+    bindingName: Platformer Controls/Modifier Dual Action/binding
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH
+    humanReadableString_singleInput: BUTTON SOUTH
+    fontReferenceText: <style=font/Platformer Controls/Modifier Dual Action/binding>
+    fontCode: \uE902
+    fontCode_singleInput: \uE902
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action>
+    bindingName: Platformer Controls/Negative Positive Action
+    inputStyleString: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/DOWN"><sprite="XBox"
+      name="LEFT STICK/RIGHT"><sprite="XBox" name="LEFT STICK/LEFT"> <size=80%>or</size>
+      <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/DOWN"><sprite="XBox"
+      name="LEFT STICK/RIGHT"><sprite="XBox" name="LEFT STICK/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/DOWN"><sprite="XBox"
+      name="LEFT STICK/RIGHT"><sprite="XBox" name="LEFT STICK/LEFT">
+    humanReadableString: D-PAD/UP, D-PAD/DOWN, LEFT STICK/RIGHT, LEFT STICK/LEFT
+      <size=80%>or</size> D-PAD/UP, D-PAD/DOWN, LEFT STICK/RIGHT, LEFT STICK/LEFT
+    humanReadableString_singleInput: D-PAD/UP, D-PAD/DOWN, LEFT STICK/RIGHT, LEFT
+      STICK/LEFT
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action>
+    fontCode: \uE908\uE905\uE90F\uE90E <size=80%>or</size> \uE908\uE905\uE90F\uE90E
+    fontCode_singleInput: \uE908\uE905\uE90F\uE90E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/positive>
+    bindingName: Platformer Controls/Negative Positive Action/positive
+    inputStyleString: <sprite="XBox" name="D-PAD/UP"> <size=80%>or</size> <sprite="XBox"
+      name="LEFT STICK/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP">
+    humanReadableString: D-PAD/UP <size=80%>or</size> LEFT STICK/RIGHT
+    humanReadableString_singleInput: D-PAD/UP
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/positive>
+    fontCode: \uE908 <size=80%>or</size> \uE90F
+    fontCode_singleInput: \uE908
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/negative>
+    bindingName: Platformer Controls/Negative Positive Action/negative
+    inputStyleString: <sprite="XBox" name="D-PAD/DOWN"> <size=80%>or</size> <sprite="XBox"
+      name="LEFT STICK/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/DOWN">
+    humanReadableString: D-PAD/DOWN <size=80%>or</size> LEFT STICK/LEFT
+    humanReadableString_singleInput: D-PAD/DOWN
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/negative>
+    fontCode: \uE905 <size=80%>or</size> \uE90E
+    fontCode_singleInput: \uE905
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/2>
+    bindingName: Platformer Controls/Negative Positive Action/2
+    inputStyleString: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/DOWN"><sprite="XBox"
+      name="LEFT STICK/RIGHT"><sprite="XBox" name="LEFT STICK/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/DOWN"><sprite="XBox"
+      name="LEFT STICK/RIGHT"><sprite="XBox" name="LEFT STICK/LEFT">
+    humanReadableString: D-PAD/UP, D-PAD/DOWN, LEFT STICK/RIGHT, LEFT STICK/LEFT
+    humanReadableString_singleInput: D-PAD/UP, D-PAD/DOWN, LEFT STICK/RIGHT, LEFT
+      STICK/LEFT
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/2>
+    fontCode: \uE908\uE905\uE90F\uE90E
+    fontCode_singleInput: \uE908\uE905\uE90F\uE90E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/positive/2>
+    bindingName: Platformer Controls/Negative Positive Action/positive/2
+    inputStyleString: <sprite="XBox" name="LEFT STICK/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/RIGHT">
+    humanReadableString: LEFT STICK/RIGHT
+    humanReadableString_singleInput: LEFT STICK/RIGHT
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/positive/2>
+    fontCode: \uE90F
+    fontCode_singleInput: \uE90F
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Negative Positive Action/negative/2>
+    bindingName: Platformer Controls/Negative Positive Action/negative/2
+    inputStyleString: <sprite="XBox" name="LEFT STICK/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/LEFT">
+    humanReadableString: LEFT STICK/LEFT
+    humanReadableString_singleInput: LEFT STICK/LEFT
+    fontReferenceText: <style=font/Platformer Controls/Negative Positive Action/negative/2>
+    fontCode: \uE90E
+    fontCode_singleInput: \uE90E
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Platformer Controls/Test Action>
+    bindingName: Platformer Controls/Test Action
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH"><sprite="XBox" name="BUTTON
+      NORTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH"><sprite="XBox"
+      name="BUTTON NORTH">
+    humanReadableString: BUTTON SOUTH, BUTTON NORTH
+    humanReadableString_singleInput: BUTTON SOUTH, BUTTON NORTH
+    fontReferenceText: <style=font/Platformer Controls/Test Action>
+    fontCode: \uE902\uE901
+    fontCode_singleInput: \uE902\uE901
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Test Action/negative>
+    bindingName: Platformer Controls/Test Action/negative
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH
+    humanReadableString_singleInput: BUTTON SOUTH
+    fontReferenceText: <style=font/Platformer Controls/Test Action/negative>
+    fontCode: \uE902
+    fontCode_singleInput: \uE902
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Platformer Controls/Test Action/positive>
+    bindingName: Platformer Controls/Test Action/positive
+    inputStyleString: <sprite="XBox" name="BUTTON NORTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON NORTH">
+    humanReadableString: BUTTON NORTH
+    humanReadableString_singleInput: BUTTON NORTH
+    fontReferenceText: <style=font/Platformer Controls/Test Action/positive>
+    fontCode: \uE901
+    fontCode_singleInput: \uE901
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Move>
+    bindingName: Helicopter Controls/Move
+    inputStyleString: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/LEFT"><sprite="XBox"
+      name="D-PAD/DOWN"><sprite="XBox" name="D-PAD/RIGHT"> <size=80%>or</size> <sprite="XBox"
+      name="LEFT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP"><sprite="XBox" name="D-PAD/LEFT"><sprite="XBox"
+      name="D-PAD/DOWN"><sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/UP, D-PAD/LEFT, D-PAD/DOWN, D-PAD/RIGHT <size=80%>or</size>
+      LEFT STICK
+    humanReadableString_singleInput: D-PAD/UP, D-PAD/LEFT, D-PAD/DOWN, D-PAD/RIGHT
+    fontReferenceText: <style=font/Helicopter Controls/Move>
+    fontCode: \uE908\uE906\uE905\uE907 <size=80%>or</size> \uE90B
+    fontCode_singleInput: \uE908\uE906\uE905\uE907
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/up>
+    bindingName: Helicopter Controls/Move/up
+    inputStyleString: <sprite="XBox" name="D-PAD/UP">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/UP">
+    humanReadableString: D-PAD/UP
+    humanReadableString_singleInput: D-PAD/UP
+    fontReferenceText: <style=font/Helicopter Controls/Move/up>
+    fontCode: \uE908
+    fontCode_singleInput: \uE908
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/left>
+    bindingName: Helicopter Controls/Move/left
+    inputStyleString: <sprite="XBox" name="D-PAD/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/LEFT">
+    humanReadableString: D-PAD/LEFT
+    humanReadableString_singleInput: D-PAD/LEFT
+    fontReferenceText: <style=font/Helicopter Controls/Move/left>
+    fontCode: \uE906
+    fontCode_singleInput: \uE906
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/down>
+    bindingName: Helicopter Controls/Move/down
+    inputStyleString: <sprite="XBox" name="D-PAD/DOWN">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/DOWN">
+    humanReadableString: D-PAD/DOWN
+    humanReadableString_singleInput: D-PAD/DOWN
+    fontReferenceText: <style=font/Helicopter Controls/Move/down>
+    fontCode: \uE905
+    fontCode_singleInput: \uE905
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Helicopter Controls/Move/right>
+    bindingName: Helicopter Controls/Move/right
+    inputStyleString: <sprite="XBox" name="D-PAD/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/RIGHT
+    humanReadableString_singleInput: D-PAD/RIGHT
+    fontReferenceText: <style=font/Helicopter Controls/Move/right>
+    fontCode: \uE907
+    fontCode_singleInput: \uE907
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Move/2>
+    bindingName: Helicopter Controls/Move/2
+    inputStyleString: <sprite="XBox" name="LEFT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK">
+    humanReadableString: LEFT STICK
+    humanReadableString_singleInput: LEFT STICK
+    fontReferenceText: <style=font/Helicopter Controls/Move/2>
+    fontCode: \uE90B
+    fontCode_singleInput: \uE90B
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Rotate>
+    bindingName: Helicopter Controls/Rotate
+    inputStyleString: <sprite="XBox" name="RIGHT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK">
+    humanReadableString: RIGHT STICK
+    humanReadableString_singleInput: RIGHT STICK
+    fontReferenceText: <style=font/Helicopter Controls/Rotate>
+    fontCode: \uE913
+    fontCode_singleInput: \uE913
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Throw Bomb>
+    bindingName: Helicopter Controls/Throw Bomb
+    inputStyleString: <sprite="XBox" name="BUTTON WEST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON WEST">
+    humanReadableString: BUTTON WEST
+    humanReadableString_singleInput: BUTTON WEST
+    fontReferenceText: <style=font/Helicopter Controls/Throw Bomb>
+    fontCode: \uE903
+    fontCode_singleInput: \uE903
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Next Weapon>
+    bindingName: Helicopter Controls/Next Weapon
+    inputStyleString: <sprite="XBox" name="RIGHT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT SHOULDER">
+    humanReadableString: RIGHT SHOULDER
+    humanReadableString_singleInput: RIGHT SHOULDER
+    fontReferenceText: <style=font/Helicopter Controls/Next Weapon>
+    fontCode: \uE911
+    fontCode_singleInput: \uE911
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Previous Weapon>
+    bindingName: Helicopter Controls/Previous Weapon
+    inputStyleString: <sprite="XBox" name="LEFT SHOULDER">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT SHOULDER">
+    humanReadableString: LEFT SHOULDER
+    humanReadableString_singleInput: LEFT SHOULDER
+    fontReferenceText: <style=font/Helicopter Controls/Previous Weapon>
+    fontCode: \uE909
+    fontCode_singleInput: \uE909
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Helicopter Controls/Pause>
+    bindingName: Helicopter Controls/Pause
+    inputStyleString: <sprite="XBox" name="START">
+    inputStyleString_singleInput: <sprite="XBox" name="START">
+    humanReadableString: START
+    humanReadableString_singleInput: START
+    fontReferenceText: <style=font/Helicopter Controls/Pause>
+    fontCode: \uE91C
+    fontCode_singleInput: \uE91C
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Navigate>
+    bindingName: Menu Controls/Navigate
+    inputStyleString: <sprite="XBox" name="D-PAD"> <size=80%>or</size> <sprite="XBox"
+      name="LEFT STICK/UP"><sprite="XBox" name="LEFT STICK/DOWN"><sprite="XBox" name="LEFT
+      STICK/LEFT"><sprite="XBox" name="LEFT STICK/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD">
+    humanReadableString: D-PAD <size=80%>or</size> LEFT STICK/UP, LEFT STICK/DOWN,
+      LEFT STICK/LEFT, LEFT STICK/RIGHT
+    humanReadableString_singleInput: D-PAD
+    fontReferenceText: <style=font/Menu Controls/Navigate>
+    fontCode: \uE904 <size=80%>or</size> \uE910\uE90D\uE90E\uE90F
+    fontCode_singleInput: \uE904
+  - isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Navigate/2>
+    bindingName: Menu Controls/Navigate/2
+    inputStyleString: <sprite="XBox" name="LEFT STICK/UP"><sprite="XBox" name="LEFT
+      STICK/DOWN"><sprite="XBox" name="LEFT STICK/LEFT"><sprite="XBox" name="LEFT
+      STICK/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/UP"><sprite="XBox"
+      name="LEFT STICK/DOWN"><sprite="XBox" name="LEFT STICK/LEFT"><sprite="XBox"
+      name="LEFT STICK/RIGHT">
+    humanReadableString: LEFT STICK/UP, LEFT STICK/DOWN, LEFT STICK/LEFT, LEFT STICK/RIGHT
+    humanReadableString_singleInput: LEFT STICK/UP, LEFT STICK/DOWN, LEFT STICK/LEFT,
+      LEFT STICK/RIGHT
+    fontReferenceText: <style=font/Menu Controls/Navigate/2>
+    fontCode: \uE910\uE90D\uE90E\uE90F
+    fontCode_singleInput: \uE910\uE90D\uE90E\uE90F
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/up>
+    bindingName: Menu Controls/Navigate/up
+    inputStyleString: <sprite="XBox" name="LEFT STICK/UP">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/UP">
+    humanReadableString: LEFT STICK/UP
+    humanReadableString_singleInput: LEFT STICK/UP
+    fontReferenceText: <style=font/Menu Controls/Navigate/up>
+    fontCode: \uE910
+    fontCode_singleInput: \uE910
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/down>
+    bindingName: Menu Controls/Navigate/down
+    inputStyleString: <sprite="XBox" name="LEFT STICK/DOWN">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/DOWN">
+    humanReadableString: LEFT STICK/DOWN
+    humanReadableString_singleInput: LEFT STICK/DOWN
+    fontReferenceText: <style=font/Menu Controls/Navigate/down>
+    fontCode: \uE90D
+    fontCode_singleInput: \uE90D
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/left>
+    bindingName: Menu Controls/Navigate/left
+    inputStyleString: <sprite="XBox" name="LEFT STICK/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/LEFT">
+    humanReadableString: LEFT STICK/LEFT
+    humanReadableString_singleInput: LEFT STICK/LEFT
+    fontReferenceText: <style=font/Menu Controls/Navigate/left>
+    fontCode: \uE90E
+    fontCode_singleInput: \uE90E
+  - isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Menu Controls/Navigate/right>
+    bindingName: Menu Controls/Navigate/right
+    inputStyleString: <sprite="XBox" name="LEFT STICK/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/RIGHT">
+    humanReadableString: LEFT STICK/RIGHT
+    humanReadableString_singleInput: LEFT STICK/RIGHT
+    fontReferenceText: <style=font/Menu Controls/Navigate/right>
+    fontCode: \uE90F
+    fontCode_singleInput: \uE90F
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Submit>
+    bindingName: Menu Controls/Submit
+    inputStyleString: <sprite="XBox" name="SUBMIT">
+    inputStyleString_singleInput: <sprite="XBox" name="SUBMIT">
+    humanReadableString: SUBMIT
+    humanReadableString_singleInput: SUBMIT
+    fontReferenceText: <style=font/Menu Controls/Submit>
+    fontCode: \uE902
+    fontCode_singleInput: \uE902
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Cancel>
+    bindingName: Menu Controls/Cancel
+    inputStyleString: <sprite="XBox" name="CANCEL">
+    inputStyleString_singleInput: <sprite="XBox" name="CANCEL">
+    humanReadableString: CANCEL
+    humanReadableString_singleInput: CANCEL
+    fontReferenceText: <style=font/Menu Controls/Cancel>
+    fontCode: \uE900
+    fontCode_singleInput: \uE900
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Menu Controls/Pause>
+    bindingName: Menu Controls/Pause
+    inputStyleString: <sprite="XBox" name="START">
+    inputStyleString_singleInput: <sprite="XBox" name="START">
+    humanReadableString: START
+    humanReadableString_singleInput: START
+    fontReferenceText: <style=font/Menu Controls/Pause>
+    fontCode: \uE91C
+    fontCode_singleInput: \uE91C
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Cancel>
+    bindingName: Multiplayer Platformer Controls/Cancel
+    inputStyleString: <sprite="XBox" name="CANCEL">
+    inputStyleString_singleInput: <sprite="XBox" name="CANCEL">
+    humanReadableString: CANCEL
+    humanReadableString_singleInput: CANCEL
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Cancel>
+    fontCode: \uE900
+    fontCode_singleInput: \uE900
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Submit>
+    bindingName: Multiplayer Platformer Controls/Submit
+    inputStyleString: <sprite="XBox" name="SUBMIT">
+    inputStyleString_singleInput: <sprite="XBox" name="SUBMIT">
+    humanReadableString: SUBMIT
+    humanReadableString_singleInput: SUBMIT
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Submit>
+    fontCode: \uE902
+    fontCode_singleInput: \uE902
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move>
+    bindingName: Multiplayer Platformer Controls/Move
+    inputStyleString: <sprite="XBox" name="LEFT STICK"> <size=80%>or</size> <sprite="XBox"
+      name="RIGHT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK">
+    humanReadableString: LEFT STICK <size=80%>or</size> RIGHT STICK
+    humanReadableString_singleInput: LEFT STICK
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move>
+    fontCode: \uE90B <size=80%>or</size> \uE913
+    fontCode_singleInput: \uE90B
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Jump>
+    bindingName: Multiplayer Platformer Controls/Jump
+    inputStyleString: <sprite="XBox" name="D-PAD/DOWN"> <size=80%>or</size> <sprite="XBox"
+      name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/DOWN">
+    humanReadableString: D-PAD/DOWN <size=80%>or</size> BUTTON SOUTH
+    humanReadableString_singleInput: D-PAD/DOWN
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Jump>
+    fontCode: \uE905 <size=80%>or</size> \uE902
+    fontCode_singleInput: \uE905
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Attack>
+    bindingName: Multiplayer Platformer Controls/Attack
+    inputStyleString: <sprite="XBox" name="D-PAD/RIGHT"> <size=80%>or</size> <sprite="XBox"
+      name="BUTTON EAST">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/RIGHT <size=80%>or</size> BUTTON EAST
+    humanReadableString_singleInput: D-PAD/RIGHT
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Attack>
+    fontCode: \uE907 <size=80%>or</size> \uE900
+    fontCode_singleInput: \uE907
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Pause>
+    bindingName: Multiplayer Platformer Controls/Pause
+    inputStyleString: <sprite="XBox" name="START">
+    inputStyleString_singleInput: <sprite="XBox" name="START">
+    humanReadableString: START
+    humanReadableString_singleInput: START
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Pause>
+    fontCode: \uE91C
+    fontCode_singleInput: \uE91C
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/JoinAction>
+    bindingName: Multiplayer Platformer Controls/JoinAction
+    inputStyleString: <sprite="XBox" name="D-PAD/RIGHT"> <size=80%>or</size> <sprite="XBox"
+      name="BUTTON EAST">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD/RIGHT">
+    humanReadableString: D-PAD/RIGHT <size=80%>or</size> BUTTON EAST
+    humanReadableString_singleInput: D-PAD/RIGHT
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/JoinAction>
+    fontCode: \uE907 <size=80%>or</size> \uE900
+    fontCode_singleInput: \uE907
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Move/2>
+    bindingName: Multiplayer Platformer Controls/Move/2
+    inputStyleString: <sprite="XBox" name="RIGHT STICK">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK">
+    humanReadableString: RIGHT STICK
+    humanReadableString_singleInput: RIGHT STICK
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Move/2>
+    fontCode: \uE913
+    fontCode_singleInput: \uE913
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Jump/2>
+    bindingName: Multiplayer Platformer Controls/Jump/2
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH
+    humanReadableString_singleInput: BUTTON SOUTH
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Jump/2>
+    fontCode: \uE902
+    fontCode_singleInput: \uE902
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/Attack/2>
+    bindingName: Multiplayer Platformer Controls/Attack/2
+    inputStyleString: <sprite="XBox" name="BUTTON EAST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON EAST">
+    humanReadableString: BUTTON EAST
+    humanReadableString_singleInput: BUTTON EAST
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/Attack/2>
+    fontCode: \uE900
+    fontCode_singleInput: \uE900
+  - isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Multiplayer Platformer Controls/JoinAction/2>
+    bindingName: Multiplayer Platformer Controls/JoinAction/2
+    inputStyleString: <sprite="XBox" name="BUTTON EAST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON EAST">
+    humanReadableString: BUTTON EAST
+    humanReadableString_singleInput: BUTTON EAST
+    fontReferenceText: <style=font/Multiplayer Platformer Controls/JoinAction/2>
+    fontCode: \uE900
+    fontCode_singleInput: \uE900
+  isUsingFonts: 0
+  TEXTMESHPRO_SPRITEASSET_FOLDERPATH: Assets/TextMesh Pro/Resources/Sprite Assets/
+  TEXTMESHPRO_FONTASSET_FOLDERPATH: Assets/TextMesh Pro/Resources/Fonts & Materials/
+  loggingEnabled: 1

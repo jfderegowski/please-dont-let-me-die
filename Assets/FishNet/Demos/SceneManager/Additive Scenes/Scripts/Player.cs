@@ -3,7 +3,6 @@ using FishNet.Object;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace FishNet.Demo.AdditiveScenes
 {
