@@ -1,0 +1,18 @@
+{
+    "name": "NoReleaseDate.FishNet.NetworkIdentifierSystem.Runtime",
+    "rootNamespace": "NoReleaseDate.FishNet.NetworkIdentifierSystem.Runtime",
+    "references": [
+        "GUID:e2569f5ce2a4c5545b69524ba5f9a0f5",
+        "GUID:9341dc36b33c3984e97b22dac619ca50",
+        "GUID:7c88a4a7926ee5145ad2dfa06f454c67"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

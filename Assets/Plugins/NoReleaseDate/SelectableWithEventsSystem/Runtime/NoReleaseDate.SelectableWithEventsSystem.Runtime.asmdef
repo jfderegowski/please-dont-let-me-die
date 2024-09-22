@@ -1,0 +1,17 @@
+{
+    "name": "NoReleaseDate.SelectableWithEventsSystem.Runtime",
+    "rootNamespace": "NoReleaseDate.SelectableWithEventsSystem.Runtime",
+    "references": [
+        "GUID:396257723a08def4c852a9ce37d5d5f0",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

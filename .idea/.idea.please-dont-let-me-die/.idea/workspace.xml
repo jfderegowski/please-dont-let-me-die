@@ -4,42 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa409989-5450-4541-88e7-05ca998ccf21" name="Changes" comment="" />
+    <list default="true" id="fa409989-5450-4541-88e7-05ca998ccf21" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkHudCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkHudCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/NoReleaseDate.Common.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/NoReleaseDate.Common.Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/GenericNetworkIdentifier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/GenericNetworkIdentifier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/NetworkIdentifier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/NetworkIdentifier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/SyncEnabledNetworkBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/SyncEnabledNetworkBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor/SelectionHistoryWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor/SelectionHistoryWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor/sc.utilities.selectionhistory.editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor/sc.utilities.selectionhistory.editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7b/925e5332/Action.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/3a/9067e901/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/68/c465c87f/TweenExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/6e/ea8d62c5/Tween.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/f7/4ba0d1bd/ShortcutExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/fc/0e5e1874/Tweener.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/985a800f5fdc4a78aa4c601fb18da906958200/07/a1393e98/Editor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab01c5903002456c884bd9778894c8d61dd400/d6/ce3fa9f2/Resolution.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d85f4079432d4936a7905460ca7f9628132000/a7/289710e1/SdfIcons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e4771bca8e884b09abc41eda32d6cfba9aea00/70/bb108254/NamedBuildTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e4771bca8e884b09abc41eda32d6cfba9aea00/ac/cf055011/BuildTargetGroup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/InteractionSystem/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/TMP/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/TMP/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/UGUI/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalOrVerticalLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/UGUI/UI/Core/MaskableGraphic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2lqVnxRFnF60Qt7Nz4SsMKHobLe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../please-dont-let-me-die-build\please-dont-let-me-die.exe" />

@@ -2,7 +2,8 @@
     "name": "NoReleaseDate.Common.Editor",
     "rootNamespace": "NoReleaseDate.Common.Editor",
     "references": [
-        "GUID:dcb6703bbf1c9124f9784957aa222c18"
+        "GUID:dcb6703bbf1c9124f9784957aa222c18",
+        "GUID:c3dab7fc8de88c44aa41e7fcf675b99c"
     ],
     "includePlatforms": [
         "Editor"
