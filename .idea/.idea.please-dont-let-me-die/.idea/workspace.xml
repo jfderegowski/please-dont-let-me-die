@@ -6,25 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fa409989-5450-4541-88e7-05ca998ccf21" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkHudCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkHudCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/NoReleaseDate.Common.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/NoReleaseDate.Common.Editor.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/GenericNetworkIdentifier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/GenericNetworkIdentifier.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/NetworkIdentifier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/NetworkIdentifier.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/SyncEnabledNetworkBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/DetectorSystem/SyncEnabledNetworkBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor/SelectionHistoryWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor/SelectionHistoryWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor/sc.utilities.selectionhistory.editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/Editor/sc.utilities.selectionhistory.editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SelectionHistory/package.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkHudCanvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkHudCanvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Identifier.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Identifier.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/_Testing.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/_Testing.unity.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +37,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e4771bca8e884b09abc41eda32d6cfba9aea00/ac/cf055011/BuildTargetGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/InteractionSystem/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/Raycasters/PhysicsRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
