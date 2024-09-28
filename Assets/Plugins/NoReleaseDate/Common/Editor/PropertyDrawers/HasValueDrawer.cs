@@ -2,10 +2,10 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace NoReleaseDate.Common.Editor.Properties
+namespace NoReleaseDate.Common.Editor.Editor.PropertyDrawers
 {
     [CustomPropertyDrawer(typeof(HasValue<>))]
-    public class HasValuePropertyDrawer : PropertyDrawer
+    public class HasValueDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {

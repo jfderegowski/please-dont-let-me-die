@@ -5,15 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa409989-5450-4541-88e7-05ca998ccf21" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/ActionExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/ActionExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/BinaryReaderExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/BinaryReaderExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/BinaryWriterExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/BinaryWriterExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/FileInfoExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/FileInfoExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/GuidExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/GuidExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableGuid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableGuid.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableQuaternion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableQuaternion.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableVector2.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableVector2.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableVector3.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableVector3.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkHudCanvas.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkHudCanvas.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkManager.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs/NetworkManager.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Identifier.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Identifier.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/_Testing.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/_Testing.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/Properties.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/PropertyDrawers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/Properties/HasValuePropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/PropertyDrawers/HasValueDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/Properties/HasValuePropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/PropertyDrawers/HasValueDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Editor/SaveSystemMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Editor/SaveSystemMenuItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Editor/SerializableGuidDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Editor/SerializableGuidDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SavableContextMenus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SavableContextMenus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SavableMonoBehaviourEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SavableMonoBehaviourEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SaveGameManagerMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SaveGameManagerMenuItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses/SavableRigidbody.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses/SavableRigidbody.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses/SavableTransform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses/SavableTransform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableMonoBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableMonoBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveLoadPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveLoadPlace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/BaseData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/BaseData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/ClassData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/ClassData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/SaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/SaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/SaveKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/SaveKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/ActionExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/ActionExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/BinaryReaderExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/BinaryReaderExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/BinaryWriterExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/BinaryWriterExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/FileInfoExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/FileInfoExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/GuidExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/GuidExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableGuid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableGuid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableQuaternion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableQuaternion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableVector2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableVector2.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableVector3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableVector3.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/SavePath.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/SavePath.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/FishNetSpawnaablePrefabs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/FishNetSpawnaablePrefabs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/_Prototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/_Prototyping.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/UI/FishNetNetworkHud/NetworkHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/UI/FishNetNetworkHud/NetworkHud.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +81,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/38/e9fd416a/IEquatable`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7b/925e5332/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/3a/9067e901/TweenerCore`3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/68/c465c87f/TweenExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -35,7 +96,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d85f4079432d4936a7905460ca7f9628132000/a7/289710e1/SdfIcons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e4771bca8e884b09abc41eda32d6cfba9aea00/70/bb108254/NamedBuildTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e4771bca8e884b09abc41eda32d6cfba9aea00/ac/cf055011/BuildTargetGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1e29a71158e46cdb750140a667aea01175e00/a1/1fdff78d/HideInInspector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/443ce614ff11fd4152a3c735dec9ef388c537ef8ea9c24e0f018f1bd619e85/JObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/58b0b7706a8be4f7160749424eb996a3f845a1682c3c7ac5e405a346a8c20f1/JToken.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f623736f2488a11716f7a03aa1d499eeece3df015251a70468a5f72c2db27/JArray.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b2856ca068a85f5ce4a0462fdd6462e56463d4b04c303e873a2783e049125f45/System.Security.Cryptography.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b583e7d8f82a4d824fae2e16e2af7f00dc92a5cddd53375c554aee1980d145/JContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d013391e3e3a38b9adb9cad82ad2e93d9e74c35cf211de986348b2f26e11bf/JsonSerializerSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/InteractionSystem/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/Raycasters/PhysicsRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -53,15 +121,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../please-dont-let-me-die-build\please-dont-let-me-die.exe" />
@@ -119,5 +187,24 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Savables/SavableTransform.cs</url>
+          <line>44</line>
+          <properties documentPath="G:\MyGames\please-dont-let-me-die\Assets\Plugins\NoReleaseDate\SaveSystem\Examples\SaveGameSystem\SavableClasses\SavableTransform.cs" containingFunctionPresentation="Method 'OnLoad'">
+            <startOffsets>
+              <option value="1705" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1778" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
