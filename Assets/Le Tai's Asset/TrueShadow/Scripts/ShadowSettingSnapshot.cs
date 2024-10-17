@@ -56,7 +56,7 @@ class ShadowSettingSnapshot
 
         int colorHash = HashUtils.CombineHashCodes(
             shadow.IgnoreCasterColor ? 1 : 0,
-            (int)shadow.ColorBleedMode,
+            // (int)shadow.ColorBleedMode,
             (int)(imageColor.r * 255),
             (int)(imageColor.g * 255),
             (int)(imageColor.b * 255),

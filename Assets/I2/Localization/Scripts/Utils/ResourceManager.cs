@@ -19,8 +19,8 @@ namespace I2.Loc
 			get {
 				bool changed = mInstance==null;
 
-				if (mInstance == null) 
-					mInstance = (ResourceManager)FindFirstObjectByType(typeof(ResourceManager));
+				if (mInstance==null)
+					mInstance = (ResourceManager)FindObjectOfType(typeof(ResourceManager));
 
 				if (mInstance==null)
 				{

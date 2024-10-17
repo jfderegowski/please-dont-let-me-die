@@ -57,6 +57,8 @@ public partial class TrueShadow : UIBehaviour, IMeshModifier, ICanvasElement
     [Tooltip("Ignore the shadow caster's color, so you can choose specific color for your shadow")]
     [SerializeField] bool ignoreCasterColor = false;
 
+    [HideInInspector]
+    [Obsolete]
     [Tooltip(
         "How to obtain the color of the area outside of the source image. " +
         "Automatically set based on Blend Mode. You should only change this setting if you are using some very custom UI that require it"
@@ -313,24 +315,25 @@ public partial class TrueShadow : UIBehaviour, IMeshModifier, ICanvasElement
             blendMode = value;
             shadowRenderer.UpdateMaterial();
 
-            switch (blendMode)
-            {
-            case BlendMode.Normal:
-            case BlendMode.Additive:
-            case BlendMode.Screen:
-            case BlendMode.Multiply:
-                ColorBleedMode = ColorBleedMode.Black;
-                break;
-            default:
-                ColorBleedMode = ColorBleedMode.Black;
-                break;
-            }
+            // switch (blendMode)
+            // {
+            // case BlendMode.Normal:
+            // case BlendMode.Additive:
+            // case BlendMode.Screen:
+            // case BlendMode.Multiply:
+            //     ColorBleedMode = ColorBleedMode.Black;
+            //     break;
+            // default:
+            //     ColorBleedMode = ColorBleedMode.Black;
+            //     break;
+            // }
         }
     }
 
     /// <summary>
     /// How to obtain the color of the area outside the source image. Automatically set based on Blend Mode. You should only change this setting if you are using some very custom UI that require it.
     /// </summary>
+    [Obsolete]
     public ColorBleedMode ColorBleedMode
     {
         get => colorBleedMode;
@@ -376,21 +379,22 @@ public partial class TrueShadow : UIBehaviour, IMeshModifier, ICanvasElement
     {
         get
         {
-            switch (colorBleedMode)
-            {
-            case ColorBleedMode.ImageColor:
-                return Graphic.color.WithA(0);
-            case ColorBleedMode.ShadowColor:
-                return Color.WithA(0);
-            case ColorBleedMode.Black:
-                return Color.clear;
-            case ColorBleedMode.White:
-                return new Color(1, 1, 1, 0);
-            case ColorBleedMode.Plugin:
-                return casterClearColorProvider?.GetTrueShadowCasterClearColor() ?? Color.clear;
-            default:
-                throw new ArgumentOutOfRangeException();
-            }
+            return casterClearColorProvider?.GetTrueShadowCasterClearColor() ?? Color.clear;
+            // switch (colorBleedMode)
+            // {
+            // case ColorBleedMode.ImageColor:
+            //     return Graphic.color.WithA(0);
+            // case ColorBleedMode.ShadowColor:
+            //     return Color.WithA(0);
+            // case ColorBleedMode.Black:
+            //     return Color.clear;
+            // case ColorBleedMode.White:
+            //     return new Color(1, 1, 1, 0);
+            // case ColorBleedMode.Plugin:
+            //     return casterClearColorProvider?.GetTrueShadowCasterClearColor() ?? Color.clear;
+            // default:
+            //     throw new ArgumentOutOfRangeException();
+            // }
         }
     }
 
@@ -451,12 +455,14 @@ public partial class TrueShadow : UIBehaviour, IMeshModifier, ICanvasElement
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
     public bool Cutout
+
     {
         get => !shadowAsSibling || cutout;
         set => cutout = value;
     }
 
-    [SerializeField] List<Sprite> bakedShadows;
+    [SerializeField]
+    List<Sprite> bakedShadows;
 
 
     internal ShadowRenderer shadowRenderer;
@@ -723,7 +729,7 @@ public partial class TrueShadow : UIBehaviour, IMeshModifier, ICanvasElement
         other.BlendMode              = BlendMode;
         other.UseCasterAlpha         = UseCasterAlpha;
         other.IgnoreCasterColor      = IgnoreCasterColor;
-        other.ColorBleedMode         = ColorBleedMode;
+        // other.ColorBleedMode         = ColorBleedMode;
         other.DisableFitCompensation = DisableFitCompensation;
 
         other.SetLayoutTextureDirty();

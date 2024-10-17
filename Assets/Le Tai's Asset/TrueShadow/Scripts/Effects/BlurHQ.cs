@@ -16,7 +16,7 @@ public class BlurHQConfig : BlurConfig
     public int Extent    { get; private set; }
     public int NumWeight { get; private set; }
 
-    public override int MinExtent => 0;
+    public override int MinExtent => 1;
 
     public override float Strength
     {

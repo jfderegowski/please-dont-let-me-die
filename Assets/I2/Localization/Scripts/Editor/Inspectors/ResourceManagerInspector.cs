@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 namespace I2.Loc
@@ -9,7 +8,6 @@ namespace I2.Loc
 	{
 		SerializedProperty mAssets;
 
-		[Obsolete("Obsolete")]
 		void OnEnable()
 		{
 			UpgradeManager.EnablePlugins();

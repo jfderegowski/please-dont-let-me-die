@@ -42,17 +42,18 @@ Shader "Hidden/TrueShadow/ImprintPostProcess"
 
             half4 frag(v2f i) : SV_Target
             {
-                #if BLEACH
+                #if BLEACH || INSET
                     half4 color = half4(1,1,1, tex2D(_MainTex, i.uv).a);
                 #else
                     half4 color = tex2D(_MainTex, i.uv);
                 #endif
 
                 #if INSET
+                    color.rgb /= color.a;
                     color.a = 1 - color.a;
                 #endif
 
-                color.rgb*=color.a;
+                color.rgb *= color.a;
                 return color;
             }
             ENDCG

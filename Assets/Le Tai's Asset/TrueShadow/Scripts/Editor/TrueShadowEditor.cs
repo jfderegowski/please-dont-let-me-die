@@ -54,7 +54,7 @@ public class TrueShadowEditor : UnityEditor.Editor
         blendModeProp              = new EditorProperty(serializedObject, nameof(TrueShadow.BlendMode));
         multiplyCasterAlphaProp    = new EditorProperty(serializedObject, nameof(TrueShadow.UseCasterAlpha));
         ignoreCasterColorProp      = new EditorProperty(serializedObject, nameof(TrueShadow.IgnoreCasterColor));
-        colorBleedModeProp         = new EditorProperty(serializedObject, nameof(TrueShadow.ColorBleedMode));
+        // colorBleedModeProp         = new EditorProperty(serializedObject, nameof(TrueShadow.ColorBleedMode));
         disableFitCompensationProp = new EditorProperty(serializedObject, nameof(TrueShadow.DisableFitCompensation));
 
 #if LETAI_TRUESHADOW_DEBUG
@@ -210,7 +210,7 @@ public class TrueShadowEditor : UnityEditor.Editor
                 {
                     multiplyCasterAlphaProp.Draw();
                     ignoreCasterColorProp.Draw();
-                    colorBleedModeProp.Draw();
+                    // colorBleedModeProp.Draw();
                     disableFitCompensationProp.Draw();
 
                     if (KnobPropertyDrawer.procrastinationMode)
@@ -247,6 +247,11 @@ public class TrueShadowEditor : UnityEditor.Editor
         "Unity.VectorGraphics.SVGImage",
     };
 
+    static readonly string[] KNOWN_SHADER_PREFIXES = {
+        "UI/Default",
+        "TextMeshPro/",
+    };
+
 
     void DrawHashWarning()
     {
@@ -255,20 +260,31 @@ public class TrueShadowEditor : UnityEditor.Editor
         if (tss.Select(s => s.GetComponent<ITrueShadowCustomHashProvider>()).Any(s => s != null))
             return;
 
-        var casterTypes = tss.Select(s => s.GetComponent<Graphic>().GetType())
-                             .Where(t => !KNOWN_TYPES.Contains(t.FullName))
-                             .ToList();
+        var graphics = tss.Select(s => s.GetComponent<Graphic>()).ToList();
+        var unknownTypes = graphics.Select(g => g.GetType())
+                                   .Where(t => !KNOWN_TYPES.Contains(t.FullName))
+                                   .ToList();
 
-        if (casterTypes.Count == 0)
+        var unknownShaders = graphics.Select(g => g.materialForRendering.shader.name)
+                                     .Where(sn => KNOWN_SHADER_PREFIXES.All(ks => !sn.StartsWith(ks)))
+                                     .ToList();
+
+        if (!unknownTypes.Any() && !unknownShaders.Any())
             return;
+
+        string msg = "";
+        if (unknownTypes.Any())
+            msg = $"True Shadow can't tell 2 <i>{unknownTypes[0].Name}</i> apart." +
+                  $" The shadow may not update when the <i>{unknownTypes[0].Name}</i> changes.";
+        else if (unknownShaders.Any())
+            msg = $"Unrecognized Shader {unknownShaders[0]}. The shadow may not update when the material property changes.";
 
         warningIconLabel.text = "Shadow may not update with changes";
 
         using (var _ = new VerticalScope(EditorStyles.helpBox))
         {
             GUILayout.Label(warningIconLabel);
-            GUILayout.Label($"True Shadow can't tell 2 <i>{casterTypes[0].Name}</i> apart." +
-                            $" The shadow may not update when the <i>{casterTypes[0].Name}</i> changes.\n" +
+            GUILayout.Label($"{msg}\n" +
                             $"To fix this, set the shadow CustomHash, or disable shadow caching for this element.",
                             warningStyle);
 

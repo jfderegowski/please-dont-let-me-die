@@ -43,10 +43,6 @@ public class ShadowFactory
     {
         cmd           = new CommandBuffer { name = "Shadow Commands" };
         materialProps = new MaterialPropertyBlock();
-        materialProps.SetVector(ShaderId.CLIP_RECT,
-                                new Vector4(float.NegativeInfinity, float.NegativeInfinity,
-                                            float.PositiveInfinity, float.PositiveInfinity));
-        materialProps.SetInt(ShaderId.COLOR_MASK, (int)ColorWriteMask.All); // Render shadow even if mask hide graphic
 
         ShaderProperties.Init(8);
         blurConfigFast           = ScriptableObject.CreateInstance<ScalableBlurConfig>();
@@ -186,6 +182,13 @@ public class ShadowFactory
             imprintTexProcessed = RenderTexture.GetTemporary(imprintTexDesc);
 
         var texture = snapshot.shadow.Content;
+
+
+        materialProps.Clear();
+        materialProps.SetVector(ShaderId.CLIP_RECT, new Vector4(float.NegativeInfinity, float.NegativeInfinity,
+                                                                float.PositiveInfinity, float.PositiveInfinity));
+        materialProps.SetInt(ShaderId.COLOR_MASK, (int)ColorWriteMask.All); // Render shadow even if mask hide graphic
+
         if (texture)
         {
             materialProps.SetTexture(ShaderId.MAIN_TEX, texture);
@@ -215,9 +218,24 @@ public class ShadowFactory
                             -1, 1)
         );
 
-        materialProps.SetVector(ShaderId.SCREEN_PARAMS, new Vector4(tw, th,
-                                                                    1f + 1f / tw,
-                                                                    1f + 1f / th));
+        var baseTime = Time.timeSinceLevelLoad;
+        materialProps.SetVector(ShaderId.TIME, new Vector4(baseTime / 20,
+                                                           baseTime,
+                                                           baseTime * 2,
+                                                           baseTime * 3));
+        materialProps.SetVector(ShaderId.SIN_TIME, new Vector4(Mathf.Sin(baseTime / 8),
+                                                               Mathf.Sin(baseTime / 4),
+                                                               Mathf.Sin(baseTime / 2),
+                                                               Mathf.Sin(baseTime)));
+        materialProps.SetVector(ShaderId.COS_TIME, new Vector4(Mathf.Cos(baseTime / 8),
+                                                               Mathf.Cos(baseTime / 4),
+                                                               Mathf.Cos(baseTime / 2),
+                                                               Mathf.Cos(baseTime)));
+        materialProps.SetVector(ShaderId.UNITY_DELTA_TIME, new Vector4(Time.deltaTime,
+                                                                       1 / Time.deltaTime,
+                                                                       Time.smoothDeltaTime,
+                                                                       1 / Time.smoothDeltaTime));
+        materialProps.SetInt(ShaderId.UI_VERTEX_COLOR_ALWAYS_GAMMA_SPACE, 1);
 
 #if TMP_PRESENT
         if (snapshot.shadow.Graphic is TMPro.TextMeshProUGUI
@@ -226,6 +244,9 @@ public class ShadowFactory
             var lossyScale = snapshot.canvas.transform.lossyScale;
             materialProps.SetFloat(ShaderId.SCALE_X, 1f / lossyScale.x);
             materialProps.SetFloat(ShaderId.SCALE_Y, 1f / lossyScale.y);
+            materialProps.SetVector(ShaderId.SCREEN_PARAMS, new Vector4(tw, th,
+                                                                        1f + 1f / tw,
+                                                                        1f + 1f / th));
         }
 #endif
 

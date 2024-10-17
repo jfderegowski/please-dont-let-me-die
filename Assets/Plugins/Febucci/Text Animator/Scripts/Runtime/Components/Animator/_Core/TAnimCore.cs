@@ -520,7 +520,21 @@ namespace Febucci.UI.Core
         /// Contains TextAnimator's current time values.
         /// </summary>
         [HideInInspector] public TimeData time;
+        
 
+        /// <summary>
+        /// Returns the first character index inside the page, in case the text has an overflow mode set up and the text is paginated.
+        /// </summary>
+        /// <example>
+        /// If each page has 5 characters, and we're on page 2, then this method would return 5 as the starting index of the text.
+        /// </example>
+        /// <returns></returns>
+        public virtual int GetFirstCharacterIndexInsidePage() => 0;
+        /// <summary>
+        /// Returns the number of characters that fit inside the page, in case the text has an overflow mode set up and the text is paginated. (otherwise simply returns the characters count)
+        /// </summary>
+        /// <returns></returns>
+        public virtual int GetRenderedCharactersCountInsidePage() => CharactersCount;
 
         void UpdateUniformIntensity()
         {
@@ -1000,27 +1014,49 @@ namespace Febucci.UI.Core
         /// </summary>
         /// <param name="index">Character's index. See <see cref="CharactersCount"/> and the <see cref="Characters"/> array.</param>
         /// <param name="isVisible">Controls if the character should be visible</param>
-        public void SetVisibilityChar(int index, bool isVisible)
+        /// <param name="canPlayEffects"></param>
+        public void SetVisibilityChar(int index, bool isVisible, bool canPlayEffects = true)
         {
-            if(index<0 ||index>=charactersCount) return;
+            if (index < 0 || index >= charactersCount) return;
             characters[index].isVisible = isVisible;
-            if (isVisible) latestCharacterShown = characters[index];
+            if (isVisible)
+            {
+                latestCharacterShown = characters[index];
+            }
+            else
+            {
+                // fixes a bug that prevents disappearances from firing in case the character has finished appearing (if any) but that wouldn't be enough time to show disappearances at all
+                // - limit edge case would be no appearance, so the char time would be something close to zero (deltaTime), disappearances 1sec or similar, thus disappearing instantly
+                if (characters[index].info.disappearancesMaxDuration > characters[index].passedTime && characters[index].passedTime >= characters[index].info.appearancesMaxDuration)
+                    characters[index].passedTime = characters[index].info.disappearancesMaxDuration;
+            }
+
+
+
+            if (!canPlayEffects)
+            {
+                if (isVisible)
+                    characters[index].passedTime = characters[index].info.appearancesMaxDuration;
+                else
+                    characters[index].passedTime = 0;
+            }
         }
-        
+
         //TODO TEST
         /// <summary>
         /// Sets a word visibility.
         /// </summary>
         /// <param name="index">Word's index. See <see cref="WordsCount"/> and the <see cref="Words"/> array.</param>
         /// <param name="isVisible">Controls if the word should be visible</param>
-        public void SetVisibilityWord(int index, bool isVisible)
+        /// <param name="canPlayEffects"></param>
+        public void SetVisibilityWord(int index, bool isVisible, bool canPlayEffects = true)
         {
             if(index<0 || index >= wordsCount) return;
             
             WordInfo word = words[index];
             for (int i = Mathf.Max(word.firstCharacterIndex, 0); i <= word.lastCharacterIndex && i < charactersCount; i++)
             {
-                SetVisibilityChar(i, isVisible);
+                SetVisibilityChar(i, isVisible, canPlayEffects);
             }
         }
         
@@ -1035,25 +1071,7 @@ namespace Febucci.UI.Core
         {
             for (int i = 0; i < charactersCount; i++)
             {
-                SetVisibilityChar(i, isVisible);
-            }
-
-            if (!canPlayEffects)
-            {
-                if (isVisible)
-                {
-                    for (int i = 0; i < charactersCount;i++)
-                    {
-                        characters[i].passedTime = characters[i].info.appearancesMaxDuration;
-                    }
-                }
-                else
-                {
-                    for (int i = 0; i < charactersCount;i++)
-                    {
-                        characters[i].passedTime = 0;
-                    }
-                }
+                SetVisibilityChar(i, isVisible, canPlayEffects);
             }
         }
 

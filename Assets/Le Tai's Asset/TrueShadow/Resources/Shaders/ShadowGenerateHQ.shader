@@ -7,7 +7,6 @@
 
     CGINCLUDE
     #include "UnityCG.cginc"
-    #pragma enable_d3d11_debug_symbols
     #pragma multi_compile_local_fragment MAX_TAPS_64 MAX_TAPS_32 MAX_TAPS_8
 
     sampler2D _MainTex;

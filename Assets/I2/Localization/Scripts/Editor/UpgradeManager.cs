@@ -13,19 +13,16 @@ namespace I2.Loc
 	{
 		static bool mAlreadyCheckedPlugins;
 
-		[Obsolete("Obsolete")]
 		static UpgradeManager()
 		{
 			EditorApplication.update += AutoCheckPlugins;
 		}
 
-		[Obsolete("Obsolete")]
 		public static void AutoCheckPlugins()
 		{
 			CheckPlugins ();
 		}
 
-		[Obsolete("Obsolete")]
 		public static void CheckPlugins( bool bForce = false )
 		{
 			EditorApplication.update -= AutoCheckPlugins;
@@ -42,7 +39,6 @@ namespace I2.Loc
 		const string EditorPrefs_AutoEnablePlugins = "I2Loc AutoEnablePlugins";
 
 		[MenuItem( "Tools/I2 Localization/Enable Plugins/Force Detection", false, 0 )]
-		[Obsolete("Obsolete")]
 		public static void ForceCheckPlugins()
 		{
 			CheckPlugins( true );
@@ -92,7 +88,6 @@ namespace I2.Loc
 
 
 
-        [Obsolete("Obsolete")]
         public static void EnablePlugins( bool bForce = false )
 		{
 			if (!bForce)
@@ -115,7 +110,6 @@ namespace I2.Loc
 			EnablePluginsOnPlatform(BuildTargetGroup.iOS);
 		}
 
-		[Obsolete("Obsolete")]
 		static void EnablePluginsOnPlatform( BuildTargetGroup Platform )
 		{
 			string Settings = PlayerSettings.GetScriptingDefineSymbolsForGroup(Platform );
