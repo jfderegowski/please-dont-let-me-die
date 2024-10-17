@@ -1,0 +1,14 @@
+﻿{
+  "name": "com.noreleasedate.savesystem",
+  "version": "1.0.0",
+  "displayName": "SaveSystem",
+  "description": "A save system for Unity",
+  "unity": "2022.1",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  },
+  "author": {
+    "name": "jfderegowski",
+    "url": "https://github.com/jfderegowski"
+  }
+}
