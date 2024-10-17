@@ -5,75 +5,106 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa409989-5450-4541-88e7-05ca998ccf21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/ActionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/ActionExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/BinaryReaderExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/BinaryReaderExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/BinaryWriterExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/BinaryWriterExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/FileInfoExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/FileInfoExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/GuidExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Extensions/GuidExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableGuid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableGuid.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableQuaternion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableQuaternion.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableVector2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableVector2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableVector3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Runtime/Serializable/SerializableVector3.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.please-dont-let-me-die/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/Properties.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/PropertyDrawers.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/Properties/HasValuePropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/PropertyDrawers/HasValueDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/Properties/HasValuePropertyDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/Common/Editor/PropertyDrawers/HasValueDrawer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Editor/SaveSystemMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Editor/SaveSystemMenuItems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Editor/SerializableGuidDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Editor/SerializableGuidDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SavableContextMenus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SavableContextMenus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SavableMonoBehaviourEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SavableMonoBehaviourEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SaveGameManagerMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/SaveGameManagerMenuItems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses/SavableRigidbody.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses/SavableRigidbody.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses/SavableTransform.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableClasses/SavableTransform.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableMonoBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SavableMonoBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveLoadPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/SaveLoadPlace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/BaseData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/BaseData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/ClassData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/ClassData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/SaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/SaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/SaveKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/DataStructure/SaveKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/ActionExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/ActionExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/BinaryReaderExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/BinaryReaderExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/BinaryWriterExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/BinaryWriterExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/FileInfoExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/FileInfoExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/GuidExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Extensions/GuidExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableGuid.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableGuid.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableQuaternion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableQuaternion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableVector2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableVector2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableVector3.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Runtime/Serializable/SerializableVector3.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/SavePath.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/SavePath.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/FishNetSpawnaablePrefabs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/FishNetSpawnaablePrefabs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Helpers/GeneralHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Helpers/GeneralHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Helpers/NetworkBehaviourHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Helpers/NetworkBehaviourHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/ILCore/FishNetILPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/ILCore/FishNetILPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Processing/NetworkBehaviourProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Processing/NetworkBehaviourProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Processing/Prediction/PredictionProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Processing/Prediction/PredictionProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Processing/QOLAttributeProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Processing/QOLAttributeProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Processing/Rpc/RpcProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/CodeGenerating/Processing/Rpc/RpcProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Rollback Visualization/ClientPosition.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Rollback Visualization/ClientPosition.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Rollback Visualization/ServerPosition.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Rollback Visualization/ServerPosition.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Target.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Target.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Materials/Wall.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Gray4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Gray4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Gray6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Gray6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Gray8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Gray8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Mesh1_Group2_Group1_ModelMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Mesh1_Group2_Group1_ModelMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Mesh2_Group3_Group1_ModelMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Models/Weapons/Materials/Mesh2_Group3_Group1_ModelMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Fire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/CustomSyncType/Component State Sync/ComponentStateSync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/CustomSyncType/Component State Sync/ComponentStateSync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Materials/Black.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Materials/Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Materials/Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Materials/Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Materials/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Materials/Player.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Materials/TreeGrowth.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Materials/TreeGrowth.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Materials/TreeStump.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Materials/TreeStump.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/Edgegap.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/Edgegap.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/Edgegap/Editor/EdgegapWindowMetadata.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/Edgegap/Editor/EdgegapWindowMetadata.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Connection/NetworkConnection.QOL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Connection/NetworkConnection.QOL.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Editor/CodeStripping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Editor/CodeStripping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Editor/ScriptingDefines.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Editor/ScriptingDefines.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/NetworkAnimator/Editor/NetworkAnimatorEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/NetworkAnimator/Editor/NetworkAnimatorEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/NetworkAnimator/NetworkAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/NetworkAnimator/NetworkAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/NetworkTransform/Editor/NetworkTransformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/NetworkTransform/Editor/NetworkTransformEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/NetworkTransform/NetworkTransform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/NetworkTransform/NetworkTransform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes/SyncStopwatch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes/SyncStopwatch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes/SyncStopwatchOperation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes/SyncStopwatchOperation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes/SyncTimer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes/SyncTimer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes/SyncTimerOperation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/SyncTypes/SyncTimerOperation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Client/Object/ObjectCaching.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Client/Object/ObjectCaching.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/NetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Object/ManagedObjects.Spawning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Object/ManagedObjects.Spawning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Prediction/PredictionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Prediction/PredictionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Scened/Events/UnloadSceneEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Scened/Events/UnloadSceneEventArgs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Scened/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Scened/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Scened/UnloadedScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Scened/UnloadedScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Server/Object/ServerObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Server/Object/ServerObjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Timing/PreciseTick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Timing/PreciseTick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Timing/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Timing/TimeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/NetworkBehaviour.Prediction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/NetworkBehaviour.Prediction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/NetworkBehaviour.SyncTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/NetworkBehaviour.SyncTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/NetworkObject.Prediction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/NetworkObject.Prediction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncDictionary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncHashset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncHashset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncStopwatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncStopwatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncVar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/Beta/SyncVar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncDictionary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncHashset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncHashset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncVar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Object/Synchronizing/SyncVar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/ColliderRollback/Scripts/ColliderRollback.Types.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/ColliderRollback/Scripts/ColliderRollback.Types.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/ColliderRollback/Scripts/ColliderRollback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/ColliderRollback/Scripts/ColliderRollback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/ColliderRollback/Scripts/RollbackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/ColliderRollback/Scripts/RollbackManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Maths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Maths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/BasicQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/BasicQueue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/ResettableRingBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/ResettableRingBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/RingBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/RingBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/SourceAnalyzer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/SourceAnalyzer/FishNet.SourceAnalyzer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/SourceAnalyzer/FishNet.SourceAnalyzer.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/SourceGenerator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/SourceGenerator/FishNet.SourceGenerator.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/SourceGenerator/FishNet.SourceGenerator.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Core/ClientSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Core/ClientSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Core/CommonSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Core/CommonSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Core/LocalPacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Core/LocalPacket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Core/ServerSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Core/ServerSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Yak.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/Yak/Yak.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Serializing/Writer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Serializing/Writer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Transporting/Transports/Multipass/Multipass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Transporting/Transports/Multipass/Multipass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Utility/ChildTransformTickSmoother.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Utility/ChildTransformTickSmoother.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/_Prototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/_Prototyping.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/UI/FishNetNetworkHud/NetworkHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/UI/FishNetNetworkHud/NetworkHud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/BetterTransformSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BetterTransformSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +112,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/38/e9fd416a/IEquatable`1.cs" root0="FORCE_HIGHLIGHTING" />
@@ -104,17 +135,20 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b2856ca068a85f5ce4a0462fdd6462e56463d4b04c303e873a2783e049125f45/System.Security.Cryptography.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b583e7d8f82a4d824fae2e16e2af7f00dc92a5cddd53375c554aee1980d145/JContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d013391e3e3a38b9adb9cad82ad2e93d9e74c35cf211de986348b2f26e11bf/JsonSerializerSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ffe351aa6232372f4a3b8c3ff36a636f33de226f60e607acbfe569289d7289d/System.IO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/InteractionSystem/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Editor/EditorWindow/SaveGameSystemCustomEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/Raycasters/PhysicsRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/HorizontalOrVerticalLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2lqVnxRFnF60Qt7Nz4SsMKHobLe" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -125,9 +159,9 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -185,7 +219,9 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem" />
+    </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -194,14 +230,7 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Plugins/NoReleaseDate/SaveSystem/Examples/SaveGameSystem/Savables/SavableTransform.cs</url>
           <line>44</line>
-          <properties documentPath="G:\MyGames\please-dont-let-me-die\Assets\Plugins\NoReleaseDate\SaveSystem\Examples\SaveGameSystem\SavableClasses\SavableTransform.cs" containingFunctionPresentation="Method 'OnLoad'">
-            <startOffsets>
-              <option value="1705" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1778" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="G:\MyGames\please-dont-let-me-die\Assets\Plugins\NoReleaseDate\SaveSystem\Examples\SaveGameSystem\SavableClasses\SavableTransform.cs" containingFunctionPresentation="Method 'OnLoad'" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -28,7 +28,7 @@ MonoBehaviour:
   _lockSizeAspectRatio: 0
   _maxChildCountForSizeCalculation: 50
   _maxChildInspectors: 10
-  _showSizeGizmo: 1
+  _showSizeGizmo: 0
   _showSizeGizmoLabel: 1
   _sizeGizmoLabelSize: 10
   _sizeGizmoColor: {r: 1, g: 1, b: 1, a: 0.15}

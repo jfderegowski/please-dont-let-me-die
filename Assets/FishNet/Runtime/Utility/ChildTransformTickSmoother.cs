@@ -103,10 +103,6 @@ namespace FishNet.Object.Prediction
         /// </summary>
         private float _movementMultiplier = 1f;
         /// <summary>
-        /// Ticks passed since the last reconcile.
-        /// </summary>
-        private uint _reconcileInterval = RECONCILE_INTERVAL_DEFAULT;
-        /// <summary>
         /// TransformProperties to move towards.
         /// </summary>
         private BasicQueue<TickTransformProperties> _transformProperties;
@@ -175,7 +171,7 @@ namespace FishNet.Object.Prediction
         /// True if were an owner of the NetworkObject during PreTick.
         /// This is only used for performance gains.
         /// </summary>
-        private bool _ownerOnPretick;
+        private bool _useOwnerSmoothing;
         /// <summary>
         /// True if Initialized has been called and settings have not been reset.
         /// </summary>
@@ -224,7 +220,7 @@ namespace FishNet.Object.Prediction
         public void InitializeNetworked(NetworkObject nob, Transform graphicalObject, bool detach, float teleportDistance, float tickDelta, byte ownerInterpolation, TransformPropertiesFlag ownerSmoothedProperties, byte spectatorInterpolation, TransformPropertiesFlag specatorSmoothedProperties, AdaptiveInterpolationType adaptiveInterpolation)
         {
             ResetState();
-            
+
             _networkObject = nob;
             _spectatorInterpolation = spectatorInterpolation;
             _spectatorSmoothedProperties = specatorSmoothedProperties;
@@ -376,6 +372,7 @@ namespace FishNet.Object.Prediction
                 return;
 
             _preTicked = true;
+            _useOwnerSmoothing = (_networkObject == null || _networkObject.IsOwner);
 
             DiscardExcessiveTransformPropertiesQueue();
 
@@ -395,7 +392,6 @@ namespace FishNet.Object.Prediction
                 return;
 
             uint clientStateTick = _networkObject.PredictionManager.ClientStateTick;
-            _reconcileInterval = (clientStateTick - _lastReconcileTick);
             _lastReconcileTick = clientStateTick;
 
             UpdateInterpolation(clientStateTick);
@@ -578,7 +574,7 @@ namespace FishNet.Object.Prediction
 
             _moveRates = MoveRates.GetMoveRates(prevValues, nextValues, duration, teleportT);
             _moveRates.TimeRemaining = duration;
-            
+
             SetMovementMultiplier();
         }
 
@@ -620,7 +616,7 @@ namespace FishNet.Object.Prediction
                 return;
 
             TickTransformProperties ttp = _transformProperties.Peek();
-            TransformPropertiesFlag smoothedProperties = (_ownerOnPretick) ? _ownerSmoothedProperties : _spectatorSmoothedProperties;
+            TransformPropertiesFlag smoothedProperties = (_useOwnerSmoothing) ? _ownerSmoothedProperties : _spectatorSmoothedProperties;
             _moveRates.MoveWorldToTarget(_graphicalObject, ttp.Properties, smoothedProperties, (delta * _movementMultiplier));
 
             float tRemaining = _moveRates.TimeRemaining;
@@ -653,10 +649,10 @@ namespace FishNet.Object.Prediction
 
             if (_graphicalObject != null)
             {
-                if (_networkObject != null)
+                if (_rootTransform != null)
                 {
                     if (_detach)
-                        _graphicalObject.SetParent(_networkObject.transform);
+                        _graphicalObject.SetParent(_rootTransform);
                     _graphicalObject.SetWorldProperties(GetNetworkObjectWorldPropertiesWithOffset());
                     _graphicalObject = null;
                 }
@@ -669,7 +665,6 @@ namespace FishNet.Object.Prediction
             _networkObject = null;
             _teleportedTick = TimeManager.UNSET_TICK;
             _lastReconcileTick = TimeManager.UNSET_TICK;
-            _reconcileInterval = RECONCILE_INTERVAL_DEFAULT;
             _movementMultiplier = 1f;
             CollectionCaches<TickTransformProperties>.StoreAndDefault(ref _transformProperties);
             _teleportThreshold = default;

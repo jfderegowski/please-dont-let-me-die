@@ -33,6 +33,7 @@ namespace FishNet.CodeGenerating.Helping
         public MethodReference Replicate_NonAuthoritative_MethodRef;
         public MethodReference Replicate_Authortative_MethodRef;
         public MethodReference Reconcile_Client_MethodRef;
+        public MethodReference Reconcile_Client_Local_MethodRef;
         public MethodReference Replicate_Replay_MethodRef;
         public MethodReference Reconcile_Reader_MethodRef;
         public MethodReference RegisterReplicateRpc_MethodRef;
@@ -44,7 +45,6 @@ namespace FishNet.CodeGenerating.Helping
         public MethodReference SendServerRpc_MethodRef;
         public MethodReference SendObserversRpc_MethodRef;
         public MethodReference SendTargetRpc_MethodRef;
-        public MethodReference DirtySyncType_MethodRef;
         public MethodReference RegisterServerRpc_MethodRef;
         public MethodReference RegisterObserversRpc_MethodRef;
         public MethodReference RegisterTargetRpc_MethodRef;
@@ -117,11 +117,11 @@ namespace FishNet.CodeGenerating.Helping
                     Reconcile_Server_MethodRef = base.ImportReference(mi);
                 else if (mi.Name == nameof(NetworkBehaviour.Reconcile_Client))
                     Reconcile_Client_MethodRef = base.ImportReference(mi);
+                else if (mi.Name == nameof(NetworkBehaviour.Reconcile_Client_Local))
+                    Reconcile_Client_Local_MethodRef = base.ImportReference(mi);
                 //Misc.
                 else if (mi.Name == nameof(NetworkBehaviour.OwnerMatches))
                     OwnerMatches_MethodRef = base.ImportReference(mi);
-                else if (mi.Name == nameof(NetworkBehaviour.DirtySyncType))
-                    DirtySyncType_MethodRef = base.ImportReference(mi);
                 else if (mi.Name == nameof(NetworkBehaviour.NetworkInitializeIfDisabled))
                     NetworkInitializeIfDisabled_MethodRef = base.ImportReference(mi);
                 //Prediction
@@ -178,7 +178,6 @@ namespace FishNet.CodeGenerating.Helping
             return typeDef.GetMethod(AWAKE_METHOD_NAME);
         }
 
-
         /// <summary>
         /// Creates a replicate delegate.
         /// </summary>
@@ -205,8 +204,6 @@ namespace FishNet.CodeGenerating.Helping
             processor.InsertLast(insts);
         }
 
-
-
         /// <summary>
         /// Creates a RPC delegate for rpcType.
         /// </summary>
@@ -216,7 +213,18 @@ namespace FishNet.CodeGenerating.Helping
         /// <param name="rpcType"></param>
         internal void CreateRpcDelegate(bool runLocally, TypeDefinition typeDef, MethodDefinition readerMethodDef, RpcType rpcType, uint methodHash, CustomAttribute rpcAttribute)
         {
-            
+            //PROSTART            
+            if (CodeStripping.StripBuild)
+            {
+                /* Clients do not need to register serverRpcs since they won't
+                 * get them, just as server doesn't need to register client rpcs. */
+                bool isServerRpc = (rpcType == RpcType.Server);
+                if ((isServerRpc && CodeStripping.ReleasingForClient) || (!isServerRpc && CodeStripping.ReleasingForServer))
+                {
+                    return;
+                }
+            }
+            //PROEND
 
             MethodDefinition methodDef = typeDef.GetMethod(NetworkBehaviourProcessor.NETWORKINITIALIZE_EARLY_INTERNAL_NAME);
             ILProcessor processor = methodDef.Body.GetILProcessor();
@@ -277,9 +285,7 @@ namespace FishNet.CodeGenerating.Helping
             if (loggingType != LoggingType.Off)
             {
                 string disableLoggingText = (notifyMessageCanBeDisabled) ? DISABLE_LOGGING_TEXT : string.Empty;
-                string msg = (retIfOwner) ?
-                    $"Cannot complete action because you are the owner of this object. {disableLoggingText}." :
-                    $"Cannot complete action because you are not the owner of this object. {disableLoggingText}.";
+                string msg = (retIfOwner) ? $"Cannot complete action because you are the owner of this object. {disableLoggingText}." : $"Cannot complete action because you are not the owner of this object. {disableLoggingText}.";
 
                 instructions.AddRange(base.GetClass<GeneralHelper>().LogMessage(methodDef, msg, loggingType));
             }
@@ -387,8 +393,8 @@ namespace FishNet.CodeGenerating.Helping
         internal void CreateIsServerCheck(MethodDefinition methodDef, LoggingType loggingType, bool useStatic, bool insertFirst, bool checkIsNetworked)
         {
             /* This is placed after the if check.
-            * Should the if check pass then code
-            * jumps to this instruction. */
+             * Should the if check pass then code
+             * jumps to this instruction. */
             ILProcessor processor = methodDef.Body.GetILProcessor();
             Instruction endIf = processor.Create(OpCodes.Nop);
 
@@ -444,7 +450,6 @@ namespace FishNet.CodeGenerating.Helping
 
             return insts;
         }
-
 
         /// <summary>
         /// Creates a return using the ReturnType for methodDef.
