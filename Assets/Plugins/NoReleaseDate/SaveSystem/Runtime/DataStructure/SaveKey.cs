@@ -1,6 +1,6 @@
 ﻿using System;
 using NoReleaseDate.Common.Runtime.Properties;
-using SaveSystem.Runtime.Serializable;
+using NoReleaseDate.Common.Runtime.Serializable;
 using UnityEngine;
 
 namespace Plugins.SaveSystem.DataStructure

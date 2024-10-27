@@ -71,8 +71,8 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem.Editor
             {
                 try
                 {
-                    var dataToSave = new ClassData(savableMonoBehaviour.DataToSave);
-                    var defSaveData = new ClassData(savableMonoBehaviour.DefSaveData);
+                    var dataToSave = new ClassData {Data = savableMonoBehaviour.DataToSave.Data};
+                    var defSaveData = new ClassData {Data = savableMonoBehaviour.DefSaveData.Data};
                 
                     var dataToSaveJson = JsonConvert.SerializeObject(dataToSave);
                     var defSaveDataJson = JsonConvert.SerializeObject(defSaveData);

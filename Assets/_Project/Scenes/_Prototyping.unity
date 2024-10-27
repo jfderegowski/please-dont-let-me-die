@@ -836,10 +836,10 @@ MonoBehaviour:
       m_Calls: []
   <SaveKey>k__BackingField:
     Key:
-      Part1: 3849537292
-      Part2: 1157789458
-      Part3: 2670179999
-      Part4: 852518237
+      Part1: 3921608425
+      Part2: 1312603772
+      Part3: 3625478798
+      Part4: 159082554
     StringKey:
       value: 
       hasValue: 0
@@ -1900,6 +1900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1298157366}
+  - component: {fileID: 1298157367}
   m_Layer: 0
   m_Name: PerformanceTest
   m_TagString: Untagged
@@ -1922,6 +1923,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1298157367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298157364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5df35e5e6b941859132552cb309abae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SaveSettings:
+    FileLimit:
+      value: 100
+      hasValue: 1
+    JsonSettings:
+      value:
+        TypeNameHandling: 3
+        Formatting: 1
+      hasValue: 1
+    EncryptionSettings:
+      value:
+        Salt: g46dzQ80
+        InitVector: OFRna74m*aze01xY
+        Password: 70ba1734-725c-4110-a498-023daf4561b0
+      hasValue: 1
 --- !u!1 &1304012543
 GameObject:
   m_ObjectHideFlags: 0

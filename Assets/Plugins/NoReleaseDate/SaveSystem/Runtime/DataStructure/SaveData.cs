@@ -1,143 +1,117 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using SaveSystem.Runtime.DataStructure;
-using SaveSystem.Runtime.Extensions;
-using SaveSystem.Runtime.Serializable;
+using NoReleaseDate.Common.Runtime.Serializable;
+using Plugins.SaveSystem.DataStructure;
+using SaveSystem.Runtime.Encryption;
+using SaveSystem.Runtime.Settings;
 using UnityEngine;
 
-namespace Plugins.SaveSystem.DataStructure
+namespace SaveSystem.Runtime.DataStructure
 {
     public class SaveData : BaseData<ClassData>
     {
-        public SaveData()
+        public async Task Save(string path, SaveSettings saveSettings = null,
+            Action onBeforeSave = null, Action onAfterSave = null)
         {
+            onBeforeSave?.Invoke();
 
-        }
-
-        public SaveData(SaveData data) : base(data.Data)
-        {
-
-        }
-
-        public static readonly JsonSerializerSettings JsonSerializerSettings = new()
-        {
-            TypeNameHandling = TypeNameHandling.None,
-            Formatting = Formatting.Indented,
-            Converters = { new SaveDataJsonConverter() }
-        };
-
-        public async Task<string> Save(string folderPath, int fileLimit = 0,
-            Action onAfterSave = null, Action onBeforeSave = null)
-        {
-            if (onBeforeSave != null) await onBeforeSave.InvokeAsync();
-
-            var fileName = await GetUniqueFileName(folderPath);
-            var savePath = $"{folderPath}/{fileName}.sav";
-            var saveResult = await WriteSaveDataToFile(savePath, this);
-            await DeleteExcessFiles(folderPath, fileLimit);
-
-            if (!saveResult) return null;
-
-            Debug.Log($"[SAVE-MANAGER] Saved to File: {savePath}");
-
-            if (onAfterSave != null) await onAfterSave.InvokeAsync();
-
-            return savePath;
-        }
-
-        public async Task Load(string filePath,
-            Action onAfterLoad = null, Action onBeforeLoad = null)
-        {
-            if (onBeforeLoad != null) await onBeforeLoad.InvokeAsync();
-
-            Debug.Log($"[SAVE-MANAGER] Loading from File: {filePath}");
-
-            var fileSaveData = await Task.Run(ReadFromFileTask);
-
-            Debug.Log($"[SAVE-MANAGER] 0000 Loaded from File: {filePath}");
-
-            Data = fileSaveData.Data;
-
-            Debug.Log($"[SAVE-MANAGER] Loaded from File: {filePath}");
-
-            if (onAfterLoad != null) await onAfterLoad.InvokeAsync();
-
+            try
+            {
+                await Task.Run(Write);
+                
+                Debug.Log($"[SAVE-MANAGER] Saved to File: {path}");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"[SAVE-MANAGER] Error saving to file: {path}\n{e.Message}");
+            }
+            
+            onAfterSave?.Invoke();
+            
             return;
 
-            Task<SaveData> ReadFromFileTask()
+            async Task Write()
             {
-                var jsonText = File.ReadAllText(filePath);
+                saveSettings ??= DefaultSaveSettings.instance.SaveSettings;
 
-                var saveData = !string.IsNullOrEmpty(jsonText)
-                    ? JsonConvert.DeserializeObject<SaveData>(jsonText, JsonSerializerSettings)
-                    : new SaveData();
+                var saveDataCopy = new SaveData { Data = Data };
+                var jsonSerializerSettings = saveSettings.JsonSettings.hasValue
+                    ? saveSettings.JsonSettings.value.JsonSerializerSettings
+                    : new JsonSerializerSettings();
+                
+                var jsonString = JsonConvert.SerializeObject(saveDataCopy, jsonSerializerSettings);
 
-                return Task.FromResult(saveData);
+                if (saveSettings.EncryptionSettings.hasValue)
+                {
+                    var password = saveSettings.EncryptionSettings.value.Password;
+                    var salt = saveSettings.EncryptionSettings.value.Salt;
+                    var initVector = saveSettings.EncryptionSettings.value.InitVector;
+                    
+                    jsonString = Aes.Encrypt(jsonString, password, salt, initVector);
+                }
+                
+                await File.WriteAllTextAsync(path, jsonString);
+
+                // Delete excess files
+                if (saveSettings.FileLimit.hasValue) 
+                    await SaveSystemHelpers.DeleteExcessFiles(Path.GetDirectoryName(path), saveSettings.FileLimit.value);
             }
         }
 
-        public FileInfo[] GetSaveFiles(string folderPath)
+        public async Task Load(string path, SaveSettings saveSettings = null,
+            Action onBeforeLoad = null, Action onAfterLoad = null)
         {
-            if (!Directory.Exists(folderPath))
-                Directory.CreateDirectory(folderPath);
-
-            return new DirectoryInfo(folderPath).GetFiles();
-        }
-
-        private async Task<string> GetUniqueFileName(string folderPath) =>
-            await Task.Run(() =>
+            onBeforeLoad?.Invoke();
+            
+            try
             {
-                var filesNames = GetSaveFiles(folderPath).Select(f => f.Name).ToList();
+                var fileSaveData = await Task.Run(Read);
 
-                var fileName = Guid.NewGuid().ToString();
+                Data = fileSaveData.Data;
 
-                while (filesNames.Contains(fileName))
-                    fileName = Guid.NewGuid().ToString();
-
-                return fileName;
-            });
-
-        private async Task DeleteExcessFiles(string folderPath, int fileLimit)
-        {
-            if (fileLimit <= 0) return;
-
-            await Task.Run(() =>
+                Debug.Log($"[SAVE-MANAGER] Loaded from File: {path}");
+            }
+            catch (Exception e)
             {
-                var saveFiles = GetSaveFiles(folderPath).SortOldestFirst().ToArray();
-                var filesToDelete = saveFiles.Length - fileLimit;
+                Debug.LogError($"[SAVE-MANAGER] Error loading from file: {path}\n{e.Message}");
+                return;
+            }
 
-                for (var i = 0; i < filesToDelete; i++)
-                    saveFiles[i].Delete();
-            });
-        }
+            onAfterLoad?.Invoke();
 
-        private static async Task<bool> WriteSaveDataToFile(string newFilePath, SaveData saveData)
-        {
-            // Copy the data to avoid errors of modifying the original data
-            var saveDataCopy = new SaveData(saveData);
+            return;
 
-            return await Task.Run(async () =>
+            async Task<SaveData> Read()
             {
-                try
+                saveSettings ??= DefaultSaveSettings.instance.SaveSettings;
+                
+                var jsonSerializerSettings = saveSettings.JsonSettings.hasValue
+                    ? saveSettings.JsonSettings.value.JsonSerializerSettings
+                    : new JsonSerializerSettings();
+                
+                var jsonText = await File.ReadAllTextAsync(path);
+                
+                if (saveSettings.EncryptionSettings.hasValue)
                 {
-                    var jsonString = JsonConvert.SerializeObject(saveDataCopy, JsonSerializerSettings);
-
-                    await File.WriteAllTextAsync(newFilePath, jsonString);
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError($"[SAVE-MANAGER] Error saving to file: {newFilePath}\n{e.Message}");
-                    return false;
+                    var password = saveSettings.EncryptionSettings.value.Password;
+                    var salt = saveSettings.EncryptionSettings.value.Salt;
+                    var initVector = saveSettings.EncryptionSettings.value.InitVector;
+                    
+                    jsonText = Aes.Decrypt(jsonText, password, salt, initVector);
                 }
 
-                return true;
-            });
+                var saveData = !string.IsNullOrEmpty(jsonText)
+                    ? JsonConvert.DeserializeObject<SaveData>(jsonText, jsonSerializerSettings)
+                    : new SaveData();
+
+                return saveData;
+            }
         }
 
-        private class SaveDataJsonConverter : JsonConverter<SaveData>
+        internal class JsonConverter : JsonConverter<SaveData>
         {
             public override void WriteJson(JsonWriter writer, SaveData value, JsonSerializer serializer)
             {
@@ -259,12 +233,12 @@ namespace Plugins.SaveSystem.DataStructure
                         // Deserialize the value using a suitable deserializer based on its type
                         var classDataValue = reader.TokenType == JsonToken.Null ? null : serializer.Deserialize(reader);
 
-                        classData.SetKey(classDataKey, classDataValue, classDataComment);
+                        classData.SetKey(classDataKey, classDataValue);
                         reader.Read(); // Move to the next element in the inner object
                     }
 
                     // Add the parsed key-value pair to the result's data
-                    saveData.SetKey(statDataKey, classData, saveDataComment);
+                    saveData.SetKey(statDataKey, classData);
                     reader.Read(); // Move to the next key-value pair in the outer object
                 }
 

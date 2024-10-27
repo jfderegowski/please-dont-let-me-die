@@ -1,6 +1,6 @@
 ﻿using System;
+using NoReleaseDate.Common.Runtime.Serializable;
 using Plugins.SaveSystem.DataStructure;
-using SaveSystem.Runtime.Serializable;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,8 +29,8 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
         
         protected virtual void Awake()
         {
-            SaveGameManager.OnAskForSave += SaveToSaveData;
-            SaveGameManager.OnAskForLoad += LoadFromSaveData;
+            SaveGameManager.onAskForSave += SaveToSaveData;
+            SaveGameManager.onAskForLoad += LoadFromSaveData;
             
             HandleSaveLoadPlace(SaveLoadPlace.Awake);
         }
@@ -66,8 +66,8 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
         {
             HandleSaveLoadPlace(SaveLoadPlace.OnDestroy);
             
-            SaveGameManager.OnAskForSave -= SaveToSaveData;
-            SaveGameManager.OnAskForLoad -= LoadFromSaveData;
+            SaveGameManager.onAskForSave -= SaveToSaveData;
+            SaveGameManager.onAskForLoad -= LoadFromSaveData;
         }
 
         public void SaveToSaveData() => 

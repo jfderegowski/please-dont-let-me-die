@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using NoReleaseDate.Common.Runtime.Extensions;
 using Plugins.SaveSystem.DataStructure;
 using SaveSystem;
-using SaveSystem.Runtime.Extensions;
+using SaveSystem.Runtime.DataStructure;
+using SaveSystem.Runtime.Settings;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -26,21 +28,21 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
     
     public static class SaveGameManager
     {
-        public static UnityEvent OnQuickSave { get; } = new();
-        public static UnityEvent OnAutoSave { get; } = new();
-        public static UnityEvent OnManualSave { get; } = new();
-        public static UnityEvent OnLoad { get; } = new();
-        public static UnityEvent<SavingStatus> OnSavingStatusChange { get; } = new();
-        public static UnityEvent<SavableMonoBehaviour, ClassData, ClassData> OnSavableBehaviourSaveBefore { get; } = new();
-        public static UnityEvent<SavableMonoBehaviour, ClassData, ClassData> OnSavableBehaviourSaveAfter { get; } = new();
-        public static UnityEvent<SavableMonoBehaviour, ClassData, ClassData> OnSavableBehaviourLoadBefore { get; } = new();
-        public static UnityEvent<SavableMonoBehaviour, ClassData, ClassData> OnSavableBehaviourLoadAfter { get; } = new();
-        public static event Action OnAskForLoadBefore;
-        public static event Action OnAskForLoad;
-        public static event Action OnAskForLoadAfter;
-        public static event Action OnAskForSaveBefore;
-        public static event Action OnAskForSave;
-        public static event Action OnAskForSaveAfter;
+        public static event Action onQuickSave;
+        public static event Action onAutoSave;
+        public static event Action onManualSave;
+        public static event Action onLoad;
+        public static event Action<SavingStatus> onSavingStatusChange;
+        public static event Action<SavableMonoBehaviour, ClassData, ClassData> onSavableSaveBefore;
+        public static event Action<SavableMonoBehaviour, ClassData, ClassData> onSavableSaveAfter;
+        public static event Action<SavableMonoBehaviour, ClassData, ClassData> onSavableLoadBefore;
+        public static event Action<SavableMonoBehaviour, ClassData, ClassData> onSavableLoadAfter;
+        public static event Action onAskForLoadBefore;
+        public static event Action onAskForLoad;
+        public static event Action onAskForLoadAfter;
+        public static event Action onAskForSaveBefore;
+        public static event Action onAskForSave;
+        public static event Action onAskForSaveAfter;
         
         public static SaveData CurrentSaveData { get; private set; } = new SaveData();
         public static int CurrentSaveProfileIndex { get; private set; }
@@ -54,37 +56,33 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
                 
                 _savingStatus = value;
                 
-                OnSavingStatusChange?.Invoke(_savingStatus);
+                onSavingStatusChange?.Invoke(_savingStatus);
             }
         }
 
         private static SavingStatus _savingStatus = SavingStatus.None;
 
-        public static string SaveFolderPath =>
-            SavePath.GetFolderPath($"{Application.persistentDataPath}/{SAVES_FOLDER_NAME}");
+        public static string CurrentRootSaveFolderPath =>
+            GetFolderPath($"{Application.persistentDataPath}/{SAVES_FOLDER_NAME}");
 
         public static string CurrentProfileFolderPath =>
-            SavePath.GetFolderPath($"{SaveFolderPath}/{PROFILE_FOLDER_NAME_PREFIX}{CurrentSaveProfileIndex}");
+            GetFolderPath($"{CurrentRootSaveFolderPath}/{PROFILE_FOLDER_NAME_PREFIX}{CurrentSaveProfileIndex}");
 
         public static string CurrentQuickSaveFolderPath =>
-            SavePath.GetFolderPath($"{CurrentProfileFolderPath}/{QUICK_SAVE_FOLDER_NAME}");
+            GetFolderPath($"{CurrentProfileFolderPath}/{QUICK_SAVE_FOLDER_NAME}");
 
         public static string CurrentAutoSaveFolderPath =>
-            SavePath.GetFolderPath($"{CurrentProfileFolderPath}/{AUTO_SAVE_FOLDER_NAME}");
+            GetFolderPath($"{CurrentProfileFolderPath}/{AUTO_SAVE_FOLDER_NAME}");
 
         public static string CurrentManualSaveFolderPath => 
-            SavePath.GetFolderPath($"{CurrentProfileFolderPath}/{MANUAL_SAVE_FOLDER_NAME}");
-        
-        private const int PROFILE_LIMIT = 5;
-        private const int QUICK_SAVES_LIMIT = 50;
-        private const int AUTO_SAVES_LIMIT = 100;
-        private const int MANUAL_SAVES_LIMIT = 10;
+            GetFolderPath($"{CurrentProfileFolderPath}/{MANUAL_SAVE_FOLDER_NAME}");
 
         private const string SAVES_FOLDER_NAME = "Saves";
         private const string PROFILE_FOLDER_NAME_PREFIX = "Profile_";
         private const string QUICK_SAVE_FOLDER_NAME = "QuickSaves";
         private const string AUTO_SAVE_FOLDER_NAME = "AutoSaves";
         private const string MANUAL_SAVE_FOLDER_NAME = "ManualSaves";
+        private const string SAVE_FILE_EXTENSION = ".sav";
 
         public static void SaveToSaveData(SavableMonoBehaviour savableMonoBehaviour, bool debug = false)
         {
@@ -94,13 +92,13 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
             var dataToSave = savableMonoBehaviour.DataToSave;
             var previousSavedData = CurrentSaveData.GetKey(saveKey, defDataToSave);
 
-            OnSavableBehaviourSaveBefore?.Invoke(savableMonoBehaviour, previousSavedData, dataToSave);
+            onSavableSaveBefore?.Invoke(savableMonoBehaviour, previousSavedData, dataToSave);
             savableMonoBehaviour.OnBeforeSave?.Invoke(previousSavedData, dataToSave);
             
-            CurrentSaveData.SetKey(saveKey, dataToSave, comment);
+            CurrentSaveData.SetKey(saveKey, dataToSave);
             
             savableMonoBehaviour.OnAfterSave?.Invoke(previousSavedData, dataToSave);
-            OnSavableBehaviourSaveAfter?.Invoke(savableMonoBehaviour, previousSavedData, dataToSave);
+            onSavableSaveAfter?.Invoke(savableMonoBehaviour, previousSavedData, dataToSave);
 
             if (debug) 
                 Debug.Log($"[SAVE-MANAGER] Saved: {saveKey}\n{string.Join(Environment.NewLine, dataToSave)}", savableMonoBehaviour);
@@ -113,61 +111,76 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
             var currentData = savableMonoBehaviour.DataToSave;
             var dataToLoad = CurrentSaveData.GetKey(saveKey, defDataToSave);
             
-            OnSavableBehaviourLoadBefore?.Invoke(savableMonoBehaviour, currentData, dataToLoad);
+            onSavableLoadBefore?.Invoke(savableMonoBehaviour, currentData, dataToLoad);
             savableMonoBehaviour.OnBeforeLoad?.Invoke(currentData, dataToLoad);
             
             savableMonoBehaviour.OnLoad(dataToLoad);
             
             savableMonoBehaviour.OnAfterLoad?.Invoke(currentData, dataToLoad);
-            OnSavableBehaviourLoadAfter?.Invoke(savableMonoBehaviour, currentData, dataToLoad);
+            onSavableLoadAfter?.Invoke(savableMonoBehaviour, currentData, dataToLoad);
 
             if (debug) 
                 Debug.Log($"[SAVE-MANAGER] Loaded: {saveKey}\n{string.Join(Environment.NewLine, dataToLoad)}", savableMonoBehaviour);
         }
 
-        public static async Task<string> AutoSave() => await SaveToFile(SaveType.AutoSave);
-        
-        public static async Task<string> QuickSave() => await SaveToFile(SaveType.QuickSave);
-        
-        public static async Task<string> ManualSave() => await SaveToFile(SaveType.ManualSave);
-
-        private static async Task<string> SaveToFile(SaveType saveType)
+        public static async Task AutoSave()
         {
             SavingStatus = SavingStatus.SavingToFile;
-            string json;
             
-            switch (saveType)
-            {
-                case SaveType.QuickSave:
-                    json = await CurrentSaveData.Save(CurrentQuickSaveFolderPath, QUICK_SAVES_LIMIT);
-                    OnQuickSave?.Invoke();
-                    break;
-                case SaveType.AutoSave:
-                    json = await CurrentSaveData.Save(CurrentAutoSaveFolderPath, AUTO_SAVES_LIMIT);
-                    OnAutoSave?.Invoke();
-                    break;
-                case SaveType.ManualSave:
-                    json = await CurrentSaveData.Save(CurrentManualSaveFolderPath, MANUAL_SAVES_LIMIT);
-                    OnManualSave?.Invoke();
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(saveType), saveType, null);
-            }
+            var saveSettings = DefaultSaveSettings.instance.SaveSettings;
+            var path = CurrentAutoSaveFolderPath 
+                   + "/" + await SaveSystemHelpers.GetUniqueFileName(CurrentAutoSaveFolderPath)
+                   + SAVE_FILE_EXTENSION;
+            
+            await CurrentSaveData.Save(path, saveSettings);
+            
+            onAutoSave?.Invoke();
             
             SavingStatus = SavingStatus.None;
-            return json;
         }
 
-        public static async Task<SaveData> LoadFromLatestSave()
+        public static async Task QuickSave()
+        {
+            SavingStatus = SavingStatus.SavingToFile;
+            
+            var saveSettings = DefaultSaveSettings.instance.SaveSettings;
+            var path = CurrentQuickSaveFolderPath 
+                       + "/" + await SaveSystemHelpers.GetUniqueFileName(CurrentQuickSaveFolderPath)
+                       + SAVE_FILE_EXTENSION;
+            
+            await CurrentSaveData.Save(path, saveSettings);
+            
+            onQuickSave?.Invoke();
+            
+            SavingStatus = SavingStatus.None;
+        }
+
+        public static async Task ManualSave()
+        {
+            SavingStatus = SavingStatus.SavingToFile;
+            
+            var saveSettings = DefaultSaveSettings.instance.SaveSettings;
+            var path = CurrentManualSaveFolderPath 
+                       + "/" + await SaveSystemHelpers.GetUniqueFileName(CurrentManualSaveFolderPath)
+                       + SAVE_FILE_EXTENSION;
+            
+            await CurrentSaveData.Save(path, saveSettings);
+            
+            onManualSave?.Invoke();
+            
+            SavingStatus = SavingStatus.None;
+        }
+
+        public static async Task LoadFromLatestSave()
         {
             var latestSaveFile = GetLatestSaveFile();
+
+            if (latestSaveFile == null) return;
             
-            if (latestSaveFile == null) return CurrentSaveData;
-            
-            return await LoadFromFile(latestSaveFile.FullName);
+            await LoadFromFile(latestSaveFile.FullName);
         }
 
-        public static async Task<SaveData> LoadFromFile(string filePath)
+        public static async Task LoadFromFile(string filePath)
         {
             SavingStatus = SavingStatus.LoadingFromFile;
 
@@ -175,28 +188,26 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
             
             SavingStatus = SavingStatus.None;
             
-            OnLoad?.Invoke();
-            
-            return CurrentSaveData;
+            onLoad?.Invoke();
         }
 
         public static async Task AskForLoad()
         {
-            await OnAskForLoadBefore.InvokeAsync();
-            await OnAskForLoad.InvokeAsync();
-            await OnAskForLoadAfter.InvokeAsync();
+            await onAskForLoadBefore.InvokeAsync();
+            await onAskForLoad.InvokeAsync();
+            await onAskForLoadAfter.InvokeAsync();
         }
 
         public static async Task AskForSave()
         {
-            await OnAskForSaveBefore.InvokeAsync();
-            await OnAskForSave.InvokeAsync();
-            await OnAskForSaveAfter.InvokeAsync();
+            await onAskForSaveBefore.InvokeAsync();
+            await onAskForSave.InvokeAsync();
+            await onAskForSaveAfter.InvokeAsync();
         }
 
         public static FileInfo GetLatestSaveFile()
         {
-            var profilesPath = Directory.GetDirectories(SaveFolderPath);
+            var profilesPath = Directory.GetDirectories(CurrentRootSaveFolderPath);
             
             if (profilesPath.Length == 0) return null;
             
@@ -208,11 +219,11 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
         }
         
         public static FileInfo[] GetSaveFiles(string folderPath) =>
-            CurrentSaveData.GetSaveFiles(folderPath);
+            SaveSystemHelpers.GetSaveFiles(folderPath);
 
         public static FileInfo[] GetSaveFilesAtProfile(int profileIndex)
         {
-            var profilePath = $"{SaveFolderPath}/{PROFILE_FOLDER_NAME_PREFIX}{profileIndex}";
+            var profilePath = $"{CurrentRootSaveFolderPath}/{PROFILE_FOLDER_NAME_PREFIX}{profileIndex}";
             return GetSaveFilesAtProfile(profilePath);
         }
         
@@ -222,15 +233,23 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem
             var quickSavesPath = $"{profilePath}/{QUICK_SAVE_FOLDER_NAME}";
             var manualSavesPath = $"{profilePath}/{MANUAL_SAVE_FOLDER_NAME}";
             
-            var autoSaves = CurrentSaveData.GetSaveFiles(autoSavesPath);
-            var quickSaves = CurrentSaveData.GetSaveFiles(quickSavesPath);
-            var manualSaves = CurrentSaveData.GetSaveFiles(manualSavesPath);
+            var autoSaves = SaveSystemHelpers.GetSaveFiles(autoSavesPath);
+            var quickSaves = SaveSystemHelpers.GetSaveFiles(quickSavesPath);
+            var manualSaves = SaveSystemHelpers.GetSaveFiles(manualSavesPath);
             
             var allSaves = new List<FileInfo>();
             allSaves.AddRange(autoSaves);
             allSaves.AddRange(quickSaves);
             
             return allSaves.ToArray();
+        }
+        
+        public static string GetFolderPath(string path)
+        {
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+            
+            return path;
         }
     }
 }

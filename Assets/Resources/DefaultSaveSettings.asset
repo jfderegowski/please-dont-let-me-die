@@ -9,7 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bc5c2bafc1748a286dc0c6f215c0b56, type: 3}
+  m_Script: {fileID: 11500000, guid: 51f3fb43955d443dac09fe1409f74d28, type: 3}
   m_Name: DefaultSaveSettings
   m_EditorClassIdentifier: 
-  <SaveSettings>k__BackingField: {fileID: 11400000, guid: 7bd1e24fb1b87744483e3aace32497e4, type: 2}
+  SaveSettings:
+    FileLimit:
+      value: 100
+      hasValue: 1
+    JsonSettings:
+      value:
+        TypeNameHandling: 3
+        Formatting: 1
+      hasValue: 1
+    EncryptionSettings:
+      value:
+        Salt: g46dzQ80
+        InitVector: OFRna74m*aze01xY
+        Password: 7e618f4e-fcc0-49eb-b77a-0fd7657f9762
+      hasValue: 1

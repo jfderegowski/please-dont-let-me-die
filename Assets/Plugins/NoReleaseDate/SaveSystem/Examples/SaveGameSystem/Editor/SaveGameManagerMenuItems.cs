@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using NoReleaseDate.SaveSystem.Editor;
 using SaveSystem;
 using UnityEditor;
 
@@ -33,10 +34,10 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem.Editor
         [MenuItem("Tools/Save System/Save Game Manager/Open Saves Folder", priority = 40)]
         public static void OpenSavesFolder()
         {
-            if (!Directory.Exists(SaveGameManager.SaveFolderPath))
-                Directory.CreateDirectory(SaveGameManager.SaveFolderPath);
+            if (!Directory.Exists(SaveGameManager.CurrentRootSaveFolderPath))
+                Directory.CreateDirectory(SaveGameManager.CurrentRootSaveFolderPath);
             
-            System.Diagnostics.Process.Start(SaveGameManager.SaveFolderPath);
+            System.Diagnostics.Process.Start(SaveGameManager.CurrentRootSaveFolderPath);
         }
         
         [MenuItem("Tools/Save System/Save Game Manager/Open Last Save File", priority = 41)]
@@ -47,7 +48,7 @@ namespace Plugins.SaveSystem.Examples.SaveGameSystem.Editor
             if (latestSaveFile == null)
                 return;
             
-            SavePath.OpenFile(latestSaveFile.FullName);
+            SaveSystemEditorHelpers.OpenFile(latestSaveFile.FullName);
         }
 
         [MenuItem("Tools/Save System/Save Game Manager/Clear Save Data", priority = 60)]
