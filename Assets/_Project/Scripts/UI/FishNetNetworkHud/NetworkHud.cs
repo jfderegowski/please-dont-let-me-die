@@ -2,7 +2,7 @@ using DG.Tweening;
 using EventButtonSystem.Runtime;
 using FishNet.Managing;
 using FishNet.Transporting;
-using UISystem.UIAnimationSystem.New;
+using NoReleaseDate.Plugins.SimpleStateAnimationSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;

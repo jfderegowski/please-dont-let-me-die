@@ -1,0 +1,16 @@
+{
+    "name": "NoReleaseDate.Common.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:396257723a08def4c852a9ce37d5d5f0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
